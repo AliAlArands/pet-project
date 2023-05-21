@@ -1,12 +1,20 @@
 import "./App.css";
+import Profile from "./pages/Profile/Profile";
 
-import { FaCoffee } from 'react-icons/fa';
+// import Cart from "./pages/Cart/Cart";
+const user = {
+  name: 'Sara Ahmad',
+  birthDay: '15/8/1999',
+  pet : {
+    type : 'Cat'
+  }
+}
 
 function App() {
 
   return <>
-    <button className="btn btn-primary">Click Here</button>
-    <FaCoffee className="mx-5 fs-1"/>
+  <Profile user={user}/>
+  {/* <Cart/> */}
   </>;
 }
 
