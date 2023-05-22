@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import ForgetPassword from "./pages/ForgetPassword/FrogetPassword";
 import Home from "./pages/Home/Home"
 import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
@@ -20,6 +21,7 @@ function App() {
     <Home/> */}
     {/* <Profile user={user}/> */}
     <Login/>
+    <ForgetPassword/>
   </>;
 }
 

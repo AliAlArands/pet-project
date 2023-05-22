@@ -1,22 +1,38 @@
 ul {
-    list-style: none;
-    padding-left: 0 !important;
+  list-style: none;
+  padding-left: 0 !important;
 }
 
 button {
-    background: none;
-    border: none;
-    padding-left: 0;
+  background: none;
+  border: none;
+  padding-left: 0;
 }
 
 a {
-    text-decoration: none !important;
-    color: black !important;
+  text-decoration: none !important;
+  color: black !important;
 }
 /* li {
     margin: 5px 0;
 } */
+.form {
+  width: 30%;
+  margin: 100px auto;
+  padding: 2rem;
+  border: 1px solid #ced4da;
+}
+
+.link {
+  color: gray !important;
+  transition: all 0.3s linear;
+  text-decoration: underline !important;
+}
+
+.link:hover {
+  color: black !important;
+}
 
 .show {
-    display: block;
+  display: block;
 }
