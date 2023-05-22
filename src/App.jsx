@@ -1,4 +1,6 @@
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home"
 import Profile from "./pages/Profile/Profile";
 
 // import Cart from "./pages/Cart/Cart";
@@ -13,8 +15,9 @@ const user = {
 function App() {
 
   return <>
-  <Profile user={user}/>
-  {/* <Cart/> */}
+    {/* <Navbar />
+    <Home/> */}
+    <Profile user={user}/>
   </>;
 }
 

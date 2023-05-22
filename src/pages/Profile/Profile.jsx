@@ -1,30 +1,22 @@
 import "./profile.css";
 import Navbar from "../../components/Navbar/Navbar";
 import { FaChevronDown } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
+// import { FaShoppingCart } from "react-icons/fa";
+import { IoMdSettings } from "react-icons/io";
 import Button from "../../components/Button/Button";
 
 const handleOnClick = () => {
-  const chevron = document.querySelector("#show-choices");
-  // console.log(icon);
+  const chevron = document.querySelector("#chevron");
+  // console.log(chevron);
   const list = document.querySelector(".setting-list");
   list.classList.toggle("show-setting-list");
   chevron.classList.toggle("chevron-down");
 };
 
-const changeAdress = () => {
-  const chevron = document.querySelector("#show-address-choices");
-  const address = document.querySelector(".address");
-  chevron.classList.toggle("chevron-down");
-  if (getComputedStyle(address).display == "none")
-    address.style.display = "block";
-  else address.style.display = "none";
-};
-
 const Profile = ({ user }) => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="profile">
         <div className="profile-section">
           <h2>Hi, {user.name}</h2>
@@ -34,59 +26,53 @@ const Profile = ({ user }) => {
             className="profile-img"
           />
         </div>
-        <div className="profile-section info fw-bold d-flex flex-column">
-          <div>
-            <p>Birth Day : {user.birthDay}</p>
-            <p>Pet type : {user.pet.type}</p>
-          </div>
-
-          <div className="mt-5 w-25 apply">
+        <div className="profile-section">
+          <div className="info">
             <div className="setting">
-              <span>Setting</span>
-              <span>
-                <FaChevronDown
-                  onClick={handleOnClick}
-                  className="icon"
-                  id="show-choices"
-                />
-              </span>
+              <IoMdSettings /> <span>Setting</span>
+              <FaChevronDown
+                onClick={handleOnClick}
+                id="chevron"
+                className="icon"
+              />
             </div>
-            <ul className="setting-list">
-              <li className="setting-list-item">
+            <ul className="list-group setting-list">
+              <li className="list-group-item">
                 <button
                   type="btn"
+                  className="btn"
                   data-bs-toggle="modal"
                   data-bs-target="#photoModal"
                 >
-                  change image
-                  <FaShoppingCart className="cart"/>
+                  Change Image
                 </button>
               </li>
-              <li className="setting-list-item">
-                <button type="btn">change name</button>
+              <li className="list-group-item">
+                <button
+                  type="btn"
+                  className="btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#password"
+                >
+                  Change Password
+                </button>
+              </li>
+              <li className="list-group-item">
+                <button
+                  type="btn"
+                  className="btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#address"
+                >
+                  Change Address
+                </button>
               </li>
             </ul>
-          </div>
-
-          <div className="mt-5">
-            <div className="d-flex justify-content-between w-25 mb-2">
-              <span>Adress</span>
-              <span>
-                <FaChevronDown
-                  onClick={changeAdress}
-                  className="icon"
-                  id="show-address-choices"
-                />
-              </span>
-            </div>
-            <button type="btn" className="fw-bold address">
-              change your address
-            </button>
           </div>
         </div>
       </div>
 
-      <div className="modal me-auto" id="photoModal">
+      <div className="modal" id="photoModal">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
@@ -102,18 +88,95 @@ const Profile = ({ user }) => {
               />
               <Button content="Take Photo" classes="btn btn-secondary w-50" />
             </div>
-            {/* <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
+          </div>
+        </div>
+      </div>
+      <div className="modal" id="password">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">Change Password</h5>
+              <button type="button" className="close" data-bs-dismiss="modal">
+                &times;
               </button>
-              <button type="button" className="btn btn-primary">
-                Save changes
+            </div>
+            <div className="modal-body d-flex flex-column align-items-center ">
+              <form className="w-75">
+                <div class="form-group mb-3">
+                  <label for="name ">Email address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    // aria-describedby="emailHelp"
+                    placeholder="Enter Your Name"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    // id="exampleInputPassword1"
+                    placeholder="Password"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="modal" id="address">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">Change Address</h5>
+              <button type="button" className="close" data-bs-dismiss="modal">
+                &times;
               </button>
-            </div> */}
+            </div>
+            <div className="modal-body d-flex flex-column align-items-center ">
+              <form className="w-75">
+                <div class="form-group mb-3">
+                  <label for="old-address">Old address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="old-address"
+                    // aria-describedby="emailHelp"
+                    
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="new-address">New address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="new-address"
+                    // aria-describedby="emailHelp"
+                   
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="password">Your Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    // id="exampleInputPassword1"
+                    placeholder="Password"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

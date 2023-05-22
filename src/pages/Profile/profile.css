@@ -11,10 +11,7 @@ html {
 @media screen and (max-width: 800px) {
 }
 
-.info {
-  margin: 14% 0;
-}
-
+/* first section */
 .profile-img {
   width: 520px;
   height: 360px;
@@ -24,13 +21,22 @@ html {
   /* background-size: cover; */
 }
 
+/* second section */
+.info {
+  margin: 100px auto;
+  width: 75%;
+}
+
 .setting {
   display: flex;
   justify-content: space-between;
+  background-color: gray;
+  padding: 1rem;
 }
 
-.apply {
-  height: 200px;
+.profile-section .list-group {
+  border-radius: 0;
+  text-align: center;
 }
 
 .icon {
@@ -52,26 +58,4 @@ html {
   /* animation: show-list 0.5s forwards; */
   display: block;
   opacity: 1;
-}
-
-.setting-list li:last-child {
-  border-bottom: 0;
-}
-.setting-list-item {
-  padding: 5px 0;
-  border-bottom: 1px solid black;
-}
-
-.setting-list-item button {
-  font-weight: bold;
-}
-
-.address {
-  display: none;
-  /* background-color: #ffd101; */
-}
-
-.cart {
-  color: green;
-  font-size: 2rem;
 }
