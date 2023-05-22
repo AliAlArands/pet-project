@@ -1,0 +1,13 @@
+.input-field {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  outline: 0;
+  transition: all 0.3s linear;
+  letter-spacing: 4px;
+}
+
+.input-field:focus {
+  /* border: 1px solid gray; */
+  box-shadow: 0 0 5px 1px rgb(201, 196, 196);
+}

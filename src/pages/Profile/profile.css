@@ -1,0 +1,61 @@
+html {
+  font-size: 16px;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem 4rem;
+}
+
+@media screen and (max-width: 800px) {
+}
+
+/* first section */
+.profile-img {
+  width: 520px;
+  height: 360px;
+  object-fit: cover;
+  overflow: hidden;
+  margin-top: 3rem;
+  /* background-size: cover; */
+}
+
+/* second section */
+.info {
+  margin: 100px auto;
+  width: 75%;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
+  padding: 1rem;
+}
+
+.profile-section .list-group {
+  border-radius: 0;
+  text-align: center;
+}
+
+.icon {
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.chevron-down {
+  transform: rotate(180deg);
+}
+
+.setting-list {
+  display: none;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.show-setting-list {
+  /* animation: show-list 0.5s forwards; */
+  display: block;
+  opacity: 1;
+}
