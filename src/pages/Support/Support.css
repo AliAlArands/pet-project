@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pragraph {
+    text-align: center;
+    margin: 300px 0px;
+  }
+  .text1 {
+    text-align: center;
+    margin: 30px 0px;
+  }
+  .text2 {
+    text-align: justify;
+    margin: 0px 350px;
+  }
+  .links {
+    text-decoration: none;
+    font-size: larger;
+    color: #333333;
+  }
+  .emails {
+    margin: 50px 0px;
+  }
+  
