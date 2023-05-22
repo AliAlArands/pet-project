@@ -9,6 +9,10 @@ button {
     padding-left: 0;
 }
 
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
 /* li {
     margin: 5px 0;
 } */

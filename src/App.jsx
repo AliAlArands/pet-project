@@ -1,6 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home"
+import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
 
 // import Cart from "./pages/Cart/Cart";
@@ -17,7 +18,8 @@ function App() {
   return <>
     {/* <Navbar />
     <Home/> */}
-    <Profile user={user}/>
+    {/* <Profile user={user}/> */}
+    <Login/>
   </>;
 }
 
