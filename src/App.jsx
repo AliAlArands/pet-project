@@ -1,6 +1,8 @@
 import "./App.css";
 import CardItem from "./components/Card/Card";
 import Navbar from "./components/Navbar/Navbar";
+import Checkout from "./pages/CheckOut/CheckOut";
+import Profile from "./pages/Profile/Profile";
 import SignUp from "./pages/SignUp/SignUp";
 // import Cart from "./pages/Cart/Cart";
 const user = {
@@ -15,8 +17,10 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <SignUp />
+      <Checkout/>
+      {/* <SignUp /> */}
       {/* <CardItem /> */}
+      {/* <Profile user={user}/> */}
     </div>
   );
 }
