@@ -1,0 +1,40 @@
+.link-social-register {
+    border: 1px solid black !important;
+    width: 50%;
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+    border-radius: 15px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.google-register-link {
+    /* align-self: flex-start; */
+    margin-right: 1rem;
+}
+
+
+.no-border {
+    border: none !important;
+}
+
+.input-container {
+    border: 1px solid gainsboro;
+    border-radius: 15px;
+}
+/* .link-social-register:hover {
+
+} */
+
+.or {
+    font-weight: bold;
+}
+
+.line-between {
+    width: 20%;
+    height: 1px;
+    background-color: black;
+    margin: 0 10px;
+    /* display: inline-block; */
+}

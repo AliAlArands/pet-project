@@ -1,12 +1,8 @@
-import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import ForgetPassword from "./pages/ForgetPassword/FrogetPassword";
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
-import NewPassword from "./pages/NewPassword/NewPassword";
-import Profile from "./pages/Profile/Profile";
-import Verify from "./pages/VerficationCode/Verify";
 
+import "./App.css";
+import CardItem from "./components/Card/Card";
+import Navbar from "./components/Navbar/Navbar";
+import SignUp from "./pages/SignUp/SignUp";
 // import Cart from "./pages/Cart/Cart";
 const user = {
   name: "Sara Ahmad",
@@ -18,15 +14,12 @@ const user = {
 
 function App() {
   return (
-    <>
-      {/* <Navbar />
-    <Home/> */}
-      {/* <Profile user={user}/> */}
-      {/* <Login/>
-    <ForgetPassword/> */}
-      {/* <Verify/> */}
-      <NewPassword />
-    </>
+    <div>
+
+      {/* <Navbar/> */}
+      <SignUp/>
+      {/* <CardItem /> */}
+    </div>
   );
 }
 

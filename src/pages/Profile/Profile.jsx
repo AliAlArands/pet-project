@@ -3,7 +3,6 @@ import Navbar from "../../components/Navbar/Navbar";
 import { FaChevronDown } from "react-icons/fa";
 // import { FaShoppingCart } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
-import Button from "../../components/Button/Button";
 
 const handleOnClick = () => {
   const chevron = document.querySelector("#chevron");
