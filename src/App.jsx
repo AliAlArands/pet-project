@@ -14,7 +14,7 @@ const user = {
 function App() {
   return (
     <div>
-      {/* <Navbar/> */}
+      <Navbar/>
       <SignUp />
       {/* <CardItem /> */}
     </div>
