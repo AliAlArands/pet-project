@@ -1,0 +1,6 @@
+.add-picture-img {
+    height: 400px;
+    width: 500px;
+    /* margin: 0 25% ; */
+    object-fit: contain;
+}

@@ -81,11 +81,10 @@ const Profile = ({ user }) => {
               </button>
             </div>
             <div className="modal-body d-flex flex-column align-items-center ">
-              <Button
-                content="Open Gallery"
-                classes="mb-2 btn btn-secondary w-50"
-              />
-              <Button content="Take Photo" classes="btn btn-secondary w-50" />
+              <button className="mb-2 btn btn-secondary w-50">
+                Open Gallery
+              </button>
+              <button className="btn btn-secondary w-50">Take Photo</button>
             </div>
           </div>
         </div>
@@ -148,7 +147,6 @@ const Profile = ({ user }) => {
                     class="form-control"
                     id="old-address"
                     // aria-describedby="emailHelp"
-                    
                   />
                 </div>
                 <div class="form-group mb-3">
@@ -158,7 +156,6 @@ const Profile = ({ user }) => {
                     class="form-control"
                     id="new-address"
                     // aria-describedby="emailHelp"
-                   
                   />
                 </div>
                 <div class="form-group mb-3">
