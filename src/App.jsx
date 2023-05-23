@@ -1,4 +1,3 @@
-
 import "./App.css";
 import CardItem from "./components/Card/Card";
 import Navbar from "./components/Navbar/Navbar";
@@ -15,9 +14,8 @@ const user = {
 function App() {
   return (
     <div>
-
       {/* <Navbar/> */}
-      <SignUp/>
+      <SignUp />
       {/* <CardItem /> */}
     </div>
   );
