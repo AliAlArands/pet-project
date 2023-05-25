@@ -11,3 +11,17 @@
   /* border: 1px solid gray; */
   box-shadow: 0 0 5px 1px rgb(201, 196, 196);
 }
+
+.verify-title {
+  font-size: 2.4rem;
+}
+
+.form {
+  width: 35% !important;
+  margin-top: 0 !important;
+}
+
+.btn-send {
+  font-weight: bold;
+  font-size: 1.5rem;
+}

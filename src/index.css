@@ -28,7 +28,7 @@ a {
 }
 
 .link {
-  color: gray !important;
+  color: rgba(32, 110, 246, 1) !important;
   transition: all 0.3s linear;
   text-decoration: underline !important;
 }
@@ -56,4 +56,8 @@ a {
   font-weight: 700;
   font-size: 2.75rem;
   margin-bottom: 50px;
+}
+
+.contain {
+  padding: 100px 0;
 }
