@@ -6,7 +6,7 @@ const FindMyPet = () => {
       <div className="Findmybet background-gc">
         <p className="text-center title">Find my pet</p>
 
-        <input className="id-input" type="text" placeholder="ID" />
+        <input className="id-input" type="text" placeholder="write your ID" />
 
         <button className="btn btn-primary track-btn">Tracker</button>
       </div>

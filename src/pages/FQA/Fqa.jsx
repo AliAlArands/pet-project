@@ -1,41 +1,14 @@
 import { useEffect } from "react";
 import "./Fqa.css";
 const Fqa = () => {
-  const handleButtonClick = (btns, clickedBtn) => {
-    btns.forEach((btn) => {
-      if (btn === clickedBtn) {
-        btn.classList.add("fqa-selected");
-      } else {
-        btn.classList.remove("fqa-selected");
-      }
-    });
-    console.log("clicked");
-  };
-  useEffect(() => {
-    const btns = document.querySelectorAll(".accordion-button");
-    btns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        handleButtonClick(btns, btn);
-      });
-    });
-
-    return () => {
-      btns.forEach((btn) => {
-        btn.removeEventListener("click", () => {
-          handleButtonClick(btns, btn);
-        });
-      });
-    };
-  }, []);
-
   return (
     <div className=" fqa d-flex align-items-center flex-column background-gc">
       <h1 className="text-center fqa-heading">Genral pety FAQ</h1>
-      <div className="accordion mt-5 w-50" id="accordionExample">
+      <div className="accordion mt-5 w-100" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
-              className="accordion-button fqa-selected"
+              className="accordion-button"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
@@ -49,7 +22,7 @@ const Fqa = () => {
           </h2>
           <div
             id="collapseOne"
-            className="accordion-collapse collapse show"
+            className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
@@ -110,7 +83,6 @@ const Fqa = () => {
           </div>
         </div>
 
-
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
@@ -136,7 +108,6 @@ const Fqa = () => {
             </div>
           </div>
         </div>
-
 
         <div className="accordion-item">
           <h2 className="accordion-header">
