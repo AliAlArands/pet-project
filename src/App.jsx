@@ -1,7 +1,9 @@
 import "./App.css";
 import CardItem from "./components/Card/Card";
+import FooterComponent from "./components/Footer/FooterComponent";
 import Navbar from "./components/Navbar/Navbar";
 import SignUp from "./pages/SignUp/SignUp";
+import ProductComponent from './components/ProductComponent';
 // import Cart from "./pages/Cart/Cart";
 const user = {
   name: "Sara Ahmad",
@@ -14,9 +16,11 @@ const user = {
 function App() {
   return (
     <div>
-      {/* <Navbar/> */}
+      <Navbar/>
       <SignUp />
-      {/* <CardItem /> */}
+      <CardItem />
+      <ProductComponent/>
+      <FooterComponent/>
     </div>
   );
 }

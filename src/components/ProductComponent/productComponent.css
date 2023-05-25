@@ -1,0 +1,111 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 640px;
+    padding: 4vw;
+}
+
+.container .left {
+    width: 52.28vw;
+    height: 100%;
+}
+
+.container .left img {
+    width: 100%;
+    height: 100%;
+}
+
+.container .right {
+    height: 100%;
+
+}
+
+.container .right .right-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .right .right-content .first {
+    height: 262px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container .right .right-content .first h1 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 84px;
+    text-align: center;
+}
+
+.container .right .right-content .first .star {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.container .right .right-content .first .sold {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 44.8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container .right .right-content .first .price {
+    font-size: 32px;
+    font-weight: 700px;
+    line-height: 44.8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container .right .right-content .second {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.container .right .right-content .description p {
+    width: 28.06vw;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6D7280;
+}
+
+.add {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 4vw;
+}
+
+.add select {
+    width: 12vw;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #000000;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.add button {
+    width: 74.75vw;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Urbanist;
+    line-height: 28px;
+    color: #FFFFFF;
+    border-radius: 15px;
+    background-color: 626262;
+}
