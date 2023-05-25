@@ -31,14 +31,14 @@
 .img {
   width: 450px;
   height: 480px;
-  /* object-fit: cover; */
+  object-fit: contain;
 }
 
 .btn-shop {
   padding: 1rem 3rem !important;
   border-radius: 15px !important;
   font-weight: 600 !important;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .main-product {
@@ -47,6 +47,8 @@
 
 .main-product-desc {
   margin-bottom: 110px;
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 
 .product-description {

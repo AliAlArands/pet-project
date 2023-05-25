@@ -21,7 +21,7 @@ img {
 
 .product-name, .product-price {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .product-stars {
@@ -30,7 +30,7 @@ img {
 
 .product-desc {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
   margin-top: 0;
   margin-bottom: 21px;
 }
