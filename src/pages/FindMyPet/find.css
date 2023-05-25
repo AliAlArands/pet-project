@@ -1,0 +1,28 @@
+.Findmybet {
+  width: 100%;
+}
+.text-center {
+  margin-top: 150px;
+  margin-bottom: 70px;
+  font-size: 40px;
+}
+.TEExt {
+  display: block;
+  width: 30%;
+  margin: 20px 35%;
+  border-radius: 15px;
+  height: 50px;
+  margin-bottom: 40px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.buttonn {
+  height: 60px;
+  width: 30%;
+  margin: 20px 35%;
+  border-radius: 10px;
+  font-size: 24px;
+  background-color: gray;
+  color: white;
+}

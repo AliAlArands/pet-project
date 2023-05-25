@@ -1,0 +1,85 @@
+.left, .right {
+    padding: 1rem 2rem;
+    /* border: 1px  gray solid; */
+    border: 1px solid gray;
+    /* flex-grow: 1; */
+    width: 45%;
+
+}
+
+.right {
+    margin-left: 3rem;
+    padding: 3.2rem ;
+    
+}
+
+.payment-img {
+    width: 60%;
+    /* margin: 0 auto; */
+    /* height: 100%; */
+    margin-bottom: 2rem
+}
+
+.saved-card {
+    font-weight: bold;
+    color: gray;
+    font-size: 1.2rem;
+}
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+
+.input-field {
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: 0!important;
+    padding: 7px 0 !important;
+
+}
+.input-field:focus {
+    box-shadow: none!important;
+}
+
+.points::placeholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%; */
+    /* padding-bottom: 10px; */
+    font-size: 5rem;
+    color: black!important;
+}
+
+.data-rec {
+    border-bottom: 1px solid black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.5rem;
+}
+
+.data-rec-price {
+    font-weight: bold;
+}
+
+.last {
+ border: 0;
+ margin-bottom: 5.3rem ;   
+}
+
+.bold {
+    font-weight: bold !important;
+    font-size: 1.3rem !important;
+}
+
+.discount {
+    color: gray;
+    font-weight: bold;
+}

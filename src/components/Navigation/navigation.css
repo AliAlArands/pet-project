@@ -1,0 +1,21 @@
+.navigation {
+    background-color: black;
+}
+.tabs {
+    width: 35%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navigation-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: all 0.3s linear;
+}
+
+.navigation-link:hover {
+    color: white !important;
+}

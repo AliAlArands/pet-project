@@ -13,11 +13,11 @@ const SignUp = () => {
           <div className="h3">sign up to continue your progress</div>
 
           <a className=" link-social-register" type="submit">
-            <FaGoogle />{" "}
+            <FaGoogle className="mx-4"/>{" "}
             <span className="google-register-link">sign up with google</span>
           </a>
           <a className=" link-social-register" type="submit">
-            <FaFacebook />
+            <FaFacebook className="mx-4"/>
             <span> sign up with facebook</span>
           </a>
         </div>
