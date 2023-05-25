@@ -30,19 +30,12 @@ const product = {
 function App() {
   return (
     <div>
-<<<<<<< HEAD
-      <Navbar/>
-      <SignUp />
-      <CardItem />
-      <ProductComponent/>
-      <FooterComponent/>
-=======
       <Navbar />
-      {/* <Card product={product}/>
-      <Fqa/> */}
+      {/* <Card product={product}/> */}
       <Navigation/> 
+      <Fqa/>
+      {/* <Home/> */}
       <Home/>
->>>>>>> c8e1d140a3c0676a1ba1f9976fcac8a5478d0b5c
     </div>
   );
 }

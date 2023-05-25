@@ -1,0 +1,22 @@
+.fqa {
+    padding: 100px 0 !important;
+    /* height: 100vh;  */
+    /* This was necessary for the backgroud gradient */
+}
+
+.fqa-heading {
+    font-weight: 600;
+    font-size: 60px;
+}
+
+.fqa-selected {
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: none !important;
+    background-color: #206EF6 !important;
+    color: black !important;
+}
+
+/* .accordion-body, .accordion-header {
+    padding: 23px 46px !important;
+} */
