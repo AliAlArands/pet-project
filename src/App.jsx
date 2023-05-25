@@ -3,6 +3,7 @@ import Card from "./components/Card/Card";
 import CardItem from "./components/Card/Card";
 import FooterComponent from "./components/Footer/FooterComponent";
 import Navbar from "./components/Navbar/Navbar";
+import Support from "./pages/Support/Support";
 import Checkout from "./pages/CheckOut/CheckOut";
 import Profile from "./pages/Profile/Profile";
 import SignUp from "./pages/SignUp/SignUp";
