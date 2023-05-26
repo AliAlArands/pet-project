@@ -24,7 +24,8 @@ a {
   width: 30%;
   margin: 100px auto;
   padding: 2rem;
-  border: 1px solid #ced4da;
+  border: 1px solid rgba(181, 181, 181, 1);
+  border-radius: 5px;
 }
 
 .link {
