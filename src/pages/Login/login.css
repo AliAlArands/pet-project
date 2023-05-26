@@ -1,0 +1,16 @@
+.contain-login {
+    padding: 100px 150px !important;
+}
+
+.login-form {
+    margin: 0 !important;
+    width: 40%;
+}
+
+
+
+.log-in-img {
+    width: 377px;
+    height: 440px;
+    object-fit: contain;
+}

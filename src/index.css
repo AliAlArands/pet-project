@@ -1,5 +1,5 @@
 body {
-  font-family: 'Inter', sans-serif !important;
+  font-family: "Inter", sans-serif !important;
 }
 
 ul {
@@ -21,11 +21,12 @@ a {
     margin: 5px 0;
 } */
 .form {
-  width: 30%;
+  /* width: 30%; */
   margin: 100px auto;
   padding: 2rem;
-  border: 1px solid rgba(181, 181, 181, 1);
-  border-radius: 5px;
+  /* border: 1px solid rgba(181, 181, 181, 1); */
+  border-radius: 10px !important;
+  box-shadow: 4px 6px 10px 1px rgba(128, 128, 128, 0.2);
 }
 
 .link {
@@ -42,7 +43,7 @@ a {
   display: block;
 }
 
-.background-gc{
+.background-gc {
   background: rgba(248, 248, 248, 1);
 
   background: linear-gradient(
@@ -61,4 +62,17 @@ a {
 
 .contain {
   padding: 100px 0;
+}
+
+.label {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  margin-bottom: 8px !important;
+}
+
+.submit-btn {
+  /* padding: 20px 180px !important; */
+  border-radius: 10px !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
 }

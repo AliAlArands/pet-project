@@ -3,7 +3,7 @@ import "./verify.css";
 const Verify = () => {
   return (
     <div className="background-gc contain">
-      <form className="form text-center" action="" method="POST">
+      <form className="form text-center verify-form" action="" method="POST">
         <div className="title verify-title">Enter Verification Code</div>
         <div className="mb-4">
           <input type="text" maxlength="4" class="mb-3 input-field" />
@@ -14,7 +14,7 @@ const Verify = () => {
             </a>
           </p>
         </div>
-        <button type="submit" className="btn btn-primary w-75 mb-5 btn-send">
+        <button type="submit" className="btn btn-primary w-75 mb-5 submit-btn">
           Send
         </button>
       </form>
