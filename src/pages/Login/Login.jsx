@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <div className="d-flex justify-content-between align-items-center contain contain-login background-gc">
       <Form className="form login-form">
-        <div className="title">Log In</div>
+        <div className="title log-in-title">Log In</div>
         <p className="label">Welcom Back.</p>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label className="label ">Email</Form.Label>

@@ -24,14 +24,14 @@ const AddPicture = () => {
         </div>
       </div>
       <div className="modal" id="photoModal">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header mb-3">
+        <div className="modal-dialog ">
+          <div className="modal-content contain">
+            {/* <div className="modal-header mb-3">
               <h5 className="modal-title">Change Photo</h5>
               <button type="button" className="close fs-4" data-bs-dismiss="modal">
                 &times;
               </button>
-            </div>
+            </div> */}
             <div className="modal-body d-flex flex-column align-items-center ">
               <button className="mb-5 btn btn-primary m-btn w-50">
                 Open Gallery
