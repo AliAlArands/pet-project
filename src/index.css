@@ -1,3 +1,6 @@
+/* html {
+  font-size: 62.5%;
+} */
 body {
   font-family: "Inter", sans-serif !important;
 }
@@ -60,6 +63,10 @@ a {
   margin-bottom: 50px;
 }
 
+.large-title {
+  font-size: 3.8rem !important;
+}
+
 .contain {
   padding: 7.3% 0;
 }
@@ -82,3 +89,4 @@ a {
   font-size: 24px !important;
   font-weight: 700 !important;
 }
+

@@ -1,0 +1,69 @@
+.contain-cart {
+  padding-left: 7.3% !important;
+}
+
+.cart-items-chevrons-container {
+    /* width: 72%; */
+    /* width: 63%; */
+    /* height: 110vh; */
+    height: 600px;
+    background-color: #ececec;
+    border-radius: 20px;
+   
+
+}
+
+.cart-items {
+  overflow: hidden;
+}
+
+.check-icon {
+  height: 50px;
+  width: 50px;
+  color: white;
+  border: 1px solid #206ef6;
+  transition: all 0.3s linear;
+}
+
+.check-icon-active {
+  color: #206ef6 !important;
+  border: 0;
+}
+
+.arrow-up-down {
+  width: 10%;
+}
+
+/* .arrow-up {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
+
+.arrow-down {
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+} */
+
+.chevron-icon {
+  font-size: 2rem;
+  background-color: #206ef6;
+  background: linear-gradient(
+    90deg,
+    rgba(32, 110, 246, 0),
+    rgba(32, 110, 246, 0.2) 20% 80%,
+    rgba(32, 110, 246, 0)
+  );
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.check-out-btn {
+  width: 80%;
+  margin: 0 10%;
+}
