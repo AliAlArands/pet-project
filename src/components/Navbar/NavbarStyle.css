@@ -1,38 +1,50 @@
-.navbar-color {
-  background-color: gainsboro;
+.pet-store-navbar {
+  padding: 2rem 5%;
+  background-color: rgba(248, 248, 248, 1);
 }
 
+.logo {
+  width: 7.7rem;
+  height: 3.4rem;
+}
 .search-container {
-  border: 1px solid gray;
-  border-radius: 25px;
-  padding: 0.3rem 1rem;
+  width: 34%;
   display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
-.search-container .input { 
-  width: 448px;
-  height: 36px;
-  border-radius: 15px 0px 0px 15px;
-  border: none;
-  background-color: #E7E7E7;
-  font-weight: 600;
-  line-height: 150%;
-  font-size: 15px;
-  padding: 15px;
-}
-.search-container button{
-  width: 105px;
-  height: 36px;
-  border-radius: 0px 15px 15px 0px;
-  background-color: #206EF6;
-  color: white;
-  border: none;
 }
 
-.input {
-  border: 0;
-  background: none;
-  padding: 0.3rem;
+.search-container input {
+  border: none;
+  background: #e7e7e7;
+  border-radius: 15px 0px 0px 15px;
+  padding: 1.4rem 2rem;
+  width: 81%;
   outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.search-container input::placeholder {
+  color: rgba(190, 190, 190, 1);
+}
+
+.search-container button {
+  border: none;
+  background: rgba(32, 110, 246, 1);
+  border-radius: 0px 15px 15px 0px;
+  padding: 1rem 2rem;
+  width: 19%;
+}
+
+.icons {
+  font-size: 2.5rem;
+  width: 9%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons .icon {
+  width: 2.5rem;
+  height: 3rem;
+  object-fit: cover;
+  cursor: pointer;
 }
