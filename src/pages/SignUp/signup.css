@@ -1,40 +1,106 @@
+.social-register {
+  width: 70%;
+  /* margin: 0 100px; */
+}
+
+.contain-register {
+  padding-left: 7.3% !important;
+}
 .link-social-register {
-    border: 1px solid black !important;
-    /* width: 50%; */
-    margin: 0.5rem auto;
-    padding: 0.5rem 1rem;
-    border-radius: 15px !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  /* border: 1px solid black !important; */
+  /* width: 50%; */
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 15px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 48.7%;
+  box-shadow: 0px 0px 10px 0px gainsboro;
+
+}
+
+.sign-up-form {
+  width: 33%;
+  margin-right: auto;
+}
+
+.facebook {
+  /* background-color: rgba(204, 204, 204, 0.15) !important; */
+  background-color: white;
 }
 
 .google-register-link {
-    /* align-self: flex-start; */
-    margin-right: 1rem;
+  /* align-self: flex-start; */
+  margin-right: 1rem;
+  color: white;
 }
 
+.google-register-icon {
+  color: white;
+}
 
+.facebook-register-icon {
+  color: #206ef6;
+}
 .no-border {
-    border: none !important;
+  border: none !important;
 }
 
 .input-container {
-    border: 1px solid gainsboro;
-    border-radius: 15px;
+  border: 1px solid gainsboro;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 20px;
 }
+
+.specified-input {
+  border: 0 !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  height: 45px;
+  /* padding: 4px 10px !important; */
+}
+
+.specified-input::placeholder {
+  font-size: 1rem;
+  font-weight: bold;
+
+  padding: 10px 0 !important;
+}
+
+.user-input::placeholder {
+  /* font-size: 16px; */
+  font-weight: normal;
+}
+.input-signup-icon {
+  color: rgba(187, 190, 199);
+}
+
 /* .link-social-register:hover {
 
 } */
 
 .or {
-    font-weight: bold;
+  color: #206ef6;
+  font-weight: 700;
 }
 
 .line-between {
-    width: 20%;
-    height: 1px;
-    background-color: black;
-    margin: 0 10px;
-    /* display: inline-block; */
+  width: 25%;
+  /* height: 1px; */
+  /* background-color: black; */
+  margin: 10px;
+  /* display: inline-block; */
+  border: 1px dashed #206ef6;
+}
+
+
+.register-image {
+  margin-right: auto;
+  /* background-color : none; */
 }

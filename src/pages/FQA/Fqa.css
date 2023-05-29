@@ -1,0 +1,27 @@
+.fqa {
+  padding: 100px 20% !important;
+  /* height: 100vh;  */
+  /* This was necessary for the backgroud gradient */
+}
+
+.fqa-heading {
+  font-weight: 600;
+  font-size: 60px;
+}
+
+
+.accordion-body,
+.accordion-button {
+    /* padding: 23px 46px !important; */
+    color: rgba(109, 114, 128, 1) !important;
+    font-weight: 300 !important;
+    font-size: 18px !important;
+    transition: all 0.3s linear !important;
+}
+
+.accordion-button:focus , .fqa-selected{
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  background-color: #206ef6 !important;
+  color: black !important;
+}

@@ -3,13 +3,12 @@ import "./find.css";
 const FindMyPet = () => {
   return (
     <>
-      <div className="Findmybet">
-        <p className="text-center">Find my pet</p>
+      <div className="Findmybet background-gc">
+        <p className="text-center title">Find my pet</p>
 
-        <input className="TEExt" type="text" placeholder="ID" />
+        <input className="id-input" type="text" placeholder="write your ID" />
 
-        {/* <input className='teext' type="text" /> <br /> */}
-        <button className="buttonn">tracker</button>
+        <button className="btn btn-primary track-btn">Tracker</button>
       </div>
     </>
   );

@@ -1,6 +1,14 @@
-.add-picture-img {
-    height: 400px;
+.add-profile-img {
+    height: 350px;
     width: 500px;
-    /* margin: 0 25% ; */
     object-fit: contain;
+    margin-bottom: 50px;
+}
+
+.picture {
+    margin: 0 auto;
+}
+
+.m-btn {
+    font-size: 20px;
 }

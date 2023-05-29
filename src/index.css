@@ -1,5 +1,5 @@
 body {
-  font-family: 'Inter', sans-serif !important;
+  font-family: "Inter", sans-serif !important;
 }
 
 ul {
@@ -21,14 +21,16 @@ a {
     margin: 5px 0;
 } */
 .form {
-  width: 30%;
+  /* width: 30%; */
   margin: 100px auto;
   padding: 2rem;
-  border: 1px solid #ced4da;
+  /* border: 1px solid rgba(181, 181, 181, 1); */
+  border-radius: 10px !important;
+  box-shadow: 4px 6px 10px 1px rgba(128, 128, 128, 0.2);
 }
 
 .link {
-  color: gray !important;
+  color: rgba(32, 110, 246, 1) !important;
   transition: all 0.3s linear;
   text-decoration: underline !important;
 }
@@ -41,13 +43,42 @@ a {
   display: block;
 }
 
-.background-gc{
+.background-gc {
   background: rgba(248, 248, 248, 1);
 
   background: linear-gradient(
     45deg,
     rgba(32, 110, 246, 0.2) 0%,
-    rgb(255, 255, 255) 20% 80%,
+    rgb(255, 255, 255) 30% 65%,
     rgba(255, 209, 1, 0.2)
   );
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.75rem;
+  margin-bottom: 50px;
+}
+
+.contain {
+  padding: 7.3% 0;
+}
+
+.label {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  margin-bottom: 8px !important;
+}
+
+.label-bold {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+}
+
+.submit-btn {
+  /* padding: 20px 180px !important; */
+  border-radius: 10px !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
 }
