@@ -6,7 +6,7 @@ const Card = ({ product }) => {
   const stars = Array(product.stars).fill(1); // Create an array with the specified count
   return (
     <>
-      <div class="card mx-auto mt-5">
+      <div className="card">
         <img src={image} />
 
         <div className="pt-3">
@@ -14,14 +14,14 @@ const Card = ({ product }) => {
             <span className="product-name">{product.title}</span>
             <span className="product-stars">
               {stars.map((star, index) => (
-                <BsStarFill key={index}/>
+                <BsStarFill key={index} />
               ))}
             </span>
           </div>
           <p className="product-desc">{product.description}</p>
           <div className="add-to-cart">
-            <span className="product-price">{product.price}</span>
-            <span className="btn btn-primary">Add to cart</span>
+            <span className="product-price">{product.price}$</span>
+            <span className="btn btn-primary btn-add-to-card">Add to cart</span>
           </div>
         </div>
       </div>
