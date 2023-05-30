@@ -1,12 +1,9 @@
 import { useRef } from "react";
 import "./cart.css";
 import SmallCard from "../../components/SmallCard/SmallCard";
-import {
-  BsFillCheckSquareFill,
-  BsChevronUp,
-  BsChevronDown,
-} from "react-icons/bs";
-const Cart = ({ products }) => {
+import { BsChevronUp, BsChevronDown } from "react-icons/bs";
+import { AiOutlineCheck } from "react-icons/ai";
+const Cart = ({ products, deleteCartItem }) => {
   const cartContainer = useRef(null);
   // console.log(products);
   const handleScrollUp = () => {
@@ -30,9 +27,9 @@ const Cart = ({ products }) => {
   return (
     <div className="background-gc contain-cart contain">
       <div>
-        <h1 className="title large-title">Your Cart</h1>
-        <div className="d-flex justify-content-center align-items-center flex-column">
-          <div className="d-flex justify-content-between algin-items-center cart-items-chevrons-container mb-5">
+        <h1 className="title">Your Cart</h1>
+        <div className="d-flex justify-content-center align-items-start flex-column cart-container">
+          <div className="d-flex justify-content-between algin-items-center cart-items-chevrons-container">
             <div ref={cartContainer} className="cart-items">
               <div>
                 {products.map((product) => {
@@ -42,8 +39,11 @@ const Cart = ({ products }) => {
                       className="d-flex justify-content-around align-items-center"
                       key={product.id}
                     >
-                      <BsFillCheckSquareFill className="check-icon check-icon-active" />
-                      <SmallCard product={product} />
+                      {/* <AiOutlineCheck className="check-icon" /> */}
+                      <SmallCard
+                        product={product}
+                        deleteCartItem={deleteCartItem}
+                      />
                     </div>
                   );
                 })}
@@ -60,11 +60,13 @@ const Cart = ({ products }) => {
               />
             </div>
           </div>
-          <div className="check-out-btn"><button type="btn" className="btn btn-primary w-100 submit-btn">Check Out</button></div>
+          <div className="check-out-btn">
+            <button type="btn" className="btn btn-primary w-100 submit-btn">
+              Check Out
+            </button>
+          </div>
         </div>
-
       </div>
-
     </div>
   );
 };

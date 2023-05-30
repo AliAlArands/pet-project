@@ -37,7 +37,15 @@
 }
 
 .small-card-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: rgba(109, 114, 128);
-    font-size: 1.2rem !important;
+    font-size: 1.5rem !important;
     /* font-size: 1rem !important; */
+}
+
+.small-card-icon {
+    cursor: pointer;
+    margin-right: 1rem;
 }

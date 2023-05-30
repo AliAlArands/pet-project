@@ -1,16 +1,14 @@
 .contain-cart {
-  padding-left: 7.3% !important;
+  padding-left: 11% !important;
 }
 
 .cart-items-chevrons-container {
-    /* width: 72%; */
-    /* width: 63%; */
-    /* height: 110vh; */
-    height: 600px;
-    background-color: #ececec;
-    border-radius: 20px;
-   
-
+  width: 72%;
+  max-height: 600px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 2rem;
+  margin-left: 5%;
+  margin-bottom: 8rem;
 }
 
 .cart-items {
@@ -20,13 +18,14 @@
 .check-icon {
   height: 50px;
   width: 50px;
-  color: white;
-  border: 1px solid #206ef6;
+  color: rgba(38, 207, 124, 1);
+  border: 1px solid rgba(38, 207, 124, 1);
   transition: all 0.3s linear;
 }
 
 .check-icon-active {
-  color: #206ef6 !important;
+  background-color: rgba(38, 207, 124, 1);
+  color: white;
   border: 0;
 }
 
@@ -51,9 +50,11 @@
   background-color: #206ef6;
   background: linear-gradient(
     90deg,
-    rgba(32, 110, 246, 0),
-    rgba(32, 110, 246, 0.2) 20% 80%,
-    rgba(32, 110, 246, 0)
+    rgba(255, 255, 255, 0.5),
+    rgba(32, 110, 246, 0.5),
+    rgba(32, 110, 246, 0.5),
+    rgba(255, 255, 255, 0),
+    rgba(32, 110, 246, 0.5)
   );
   width: 50px;
   height: 50px;
@@ -64,6 +65,17 @@
 }
 
 .check-out-btn {
-  width: 80%;
-  margin: 0 10%;
+  width: 72%;
+  /* margin: 0 ; */
+  margin-left: 5%;
+}
+.check-out-btn button {
+  background-color: rgba(38, 207, 124, 1) !important;
+  border: 0;
+
+}
+
+.check-out-btn button:hover {
+  background-color: rgb(18, 161, 92) !important;
+  margin-bottom: 15rem;
 }

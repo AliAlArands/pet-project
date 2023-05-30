@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import rectangle from "./Rectangle.png";
 import {
   AiFillDelete,
@@ -6,10 +6,16 @@ import {
   AiOutlineMinusCircle,
 } from "react-icons/ai";
 import "./small.css";
-const SmallCard = ({ product }) => {
-//   console.log(product);
-  const addOne = () => {
-    console.log("add one");
+const SmallCard = ({ product, deleteCartItem }) => {
+  //   console.log(product);
+  const [count, setCount] = useState(1);
+
+  const removeOne = () => {
+    if (count === 1) {
+      deleteCartItem(product.id);
+    }
+    const newCount = count - 1;
+    setCount(newCount);
   };
   return (
     <div className="d-flex justify-content-between align-items-center small-card">
@@ -21,10 +27,19 @@ const SmallCard = ({ product }) => {
           <div className="samll-card-price">{product.price}$</div>
           <div className="small-card-icons">
             {" "}
-            <AiOutlineMinusCircle onClick={addOne} className="mx-1" />{" "}
-            <span className="mx-1">{product.count}</span>{" "}
-            <AiOutlinePlusCircle className="mx-1" />{" "}
-            <AiFillDelete className="mx-1" />
+            <AiOutlineMinusCircle
+              onClick={removeOne}
+              className=" small-card-icon"
+            />{" "}
+            <span className="me-3">{count}</span>{" "}
+            <AiOutlinePlusCircle
+              onClick={() => setCount(count + 1)}
+              className="small-card-icon"
+            />{" "}
+            <AiFillDelete
+              className="small-card-icon"
+              onClick={() => deleteCartItem(product.id)}
+            />
           </div>
         </div>
       </div>
