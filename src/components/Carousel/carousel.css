@@ -1,0 +1,56 @@
+.items {
+  position: relative;
+}
+
+.items-container {
+  overflow: hidden;
+  /* width: 90%; */
+  margin: auto;
+}
+.items-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: fit-content;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.left-right-arrows {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+
+  width: 100%;
+}
+
+.chevron-product-icon {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  position: absolute;
+  background-color: white;
+}
+
+.chevron-product-icon:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(32, 110, 246, 0.5),
+    rgba(32, 110, 246, 0.5),
+    rgba(255, 255, 255, 0),
+    rgba(32, 110, 246, 0.5)
+  );
+}
+
+.chevron-left {
+  left: 20px;
+}
+
+.chevron-right {
+  right: 20px;
+}

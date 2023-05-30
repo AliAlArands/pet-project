@@ -12,12 +12,12 @@ const Navigation = () => {
           </NavLink>
         </span>
         <span>
-          <NavLink to="/findmypet" activeClassName="active" className="navigation-link">
+          <NavLink to="/findmypet" className="navigation-link">
             Find my pet
           </NavLink>
         </span>
         <span>
-          <NavLink to="/support" activeClassName="active" className="navigation-link">
+          <NavLink to="/support" className="navigation-link">
             Support
           </NavLink>
         </span>
