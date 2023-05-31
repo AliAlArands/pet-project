@@ -17,6 +17,7 @@ import Verify from "./pages/VerficationCode/Verify.jsx";
 import NewPassword from "./pages/NewPassword/NewPassword.jsx";
 import Fqa from "./pages/FQA/Fqa.jsx";
 import Feedback from "./pages/Feedback/Feedback.jsx";
+import About from "./pages/About/About.jsx";
 
 const user = {
   name: "Sara Ahmad",
@@ -173,6 +174,10 @@ const AppWrapper = () => {
           path: "/feedback",
           element: <Feedback />,
         },
+        {
+          path: "/about",
+          element: <About/>
+        }
       ],
     },
   ]);
