@@ -6,23 +6,21 @@
   justify-content: center;
   flex-direction: column;
 }
-.title {
-  font-weight: 700;
-  font-size: 60px;
-  margin-bottom: 85px;
-}
+
 .id-input {
   /* display: block; */
+  outline: none;
   width: 55%;
-  margin-bottom: 75px;
-  border-radius: 20px;
-  padding: 12px 22px;
-  font-size: 40px;
+  margin-bottom: 7.5rem;
+  border-radius: 2rem;
+  padding: 1.2rem 2.2rem;
+  font-size: 4rem;
 }
 
 .track-btn {
-    padding: 20px 180px !important;
-    border-radius: 20px !important;
-    font-size: 35px !important;
-    font-weight: 700 !important;
+  border-radius: 2rem !important;
+  border: 3px solid #3c1da9;
+  padding: 2rem 10rem !important;
+  color: #ffffff;
 }
+

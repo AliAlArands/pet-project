@@ -1,16 +1,24 @@
 .contain-login {
-    padding: 100px 150px !important;
+  padding: 100px 150px !important;
 }
 
+.log-in-title {
+  margin-top: 4.6rem !important;
+  margin-bottom: 11rem !important;
+}
+
+.welcome-label {
+  margin-bottom: 8rem !important;
+  font-size: 2rem !important;
+  font-weight: 400 !important;
+}
 .login-form {
-    margin: 0 !important;
-    width: 40%;
+  margin: 0 !important;
+  width: 40%;
 }
-
-
 
 .log-in-img {
-    width: 377px;
-    height: 440px;
-    object-fit: contain;
+  width: 377px;
+  height: 440px;
+  object-fit: contain;
 }

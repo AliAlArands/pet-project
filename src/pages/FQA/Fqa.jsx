@@ -1,9 +1,8 @@
-import { useEffect } from "react";
 import "./Fqa.css";
 const Fqa = () => {
   return (
     <div className=" fqa d-flex align-items-center flex-column background-gc">
-      <h1 className="text-center fqa-heading">Genral pety FAQ</h1>
+      <h1 className="text-center title large-title">Genral pety FAQ</h1>
       <div className="accordion mt-5 w-100" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header">

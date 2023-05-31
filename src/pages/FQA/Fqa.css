@@ -4,11 +4,15 @@
   /* This was necessary for the backgroud gradient */
 }
 
-.fqa-heading {
-  font-weight: 600;
-  font-size: 60px;
+.accordion-item {
+  margin-bottom: 1.5rem !important;
 }
 
+.accordion-header button{
+  font-size: 2rem !important;
+  font-weight: 400 !important;
+  line-height: 3rem !important;
+}
 
 .accordion-body,
 .accordion-button {
@@ -20,8 +24,9 @@
 }
 
 .accordion-button:focus , .fqa-selected{
-  font-weight: 600 !important;
+  /* font-weight: 600 !important; */
   box-shadow: none !important;
   background-color: #206ef6 !important;
+  opacity: 0.5;
   color: black !important;
 }

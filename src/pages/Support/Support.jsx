@@ -1,26 +1,28 @@
-import React from 'react'
-import './Support.css'
+import React from "react";
+import "./Support.css";
+import Navbar from "../../components/Navbar/Navbar";
+import Navigation from "../../components/Navigation/Navigation";
 function Support() {
   return (
     <div>
-
-<div class="pragraph">
-      <h1 class="text1">Techical Support</h1>
-      <p class="text2">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, amet
-        nisi! Dolore doloribus magnam, veniam qui, accusantium ipsam quisquam
-        quo exercitationem optio, voluptatum expedita dolorem. Cupiditate
-        molestiae sapiente fugiat officia.
-      </p>
-      <div class="emails">
-        <a href="url" class="links">example@gmail.com</a>
-        <br />
-        <a href="url" class="links">example@gmail.com</a>
+      <Navbar />
+      <Navigation />
+      <div className="background-gc contain">
+        <div className="support">
+          <h1 className="title large-title">Technical support</h1>
+          <p className="support-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim lorem
+            hac a ultricies. Id ornare turpis vulputate enim sed magna sit. A id
+            cursus dolor urna. Aliquam diam integer vitae eget.
+          </p>
+          <form action="" className="w-100 d-flex justify-content-center align-items-center flex-column">
+            <input type="text" className="support-input" />
+            <button className="btn btn-primary submit-btn pages-btn">Send</button>
+          </form>
+        </div>
       </div>
     </div>
-
-    </div>
-  )
+  );
 }
 
-export default Support
+export default Support;

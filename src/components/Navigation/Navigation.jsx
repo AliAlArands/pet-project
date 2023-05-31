@@ -12,7 +12,7 @@ const Navigation = () => {
           </NavLink>
         </span>
         <span>
-          <NavLink to="/findmypet" className="navigation-link">
+          <NavLink to="/find-my-pet" className="navigation-link">
             Find my pet
           </NavLink>
         </span>

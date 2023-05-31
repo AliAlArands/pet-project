@@ -1,6 +1,14 @@
 .forget-form {
-    width: 31% !important;
+    width: 39% !important;
+    display: flex;
+    /* align-items: ; */
+    justify-content: center;
+    flex-direction: column;
     /* margin: 0 a !important; */
+}
+
+.form-group-forget-password, .forget-btn {
+    margin-bottom: 7rem;
 }
 
 .contain-forget {

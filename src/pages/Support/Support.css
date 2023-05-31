@@ -1,25 +1,25 @@
-* {
-  margin: 0;
-  padding: 0;
+.support {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 55%;
+  margin: 0 auto;
+}
+.support-description {
+  color: #6d7280;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 7.5rem;
+}
+.support-input {
+  width: 100%;
+  border-radius: 2rem;
+  outline: 0;
+  border: 1px black solid;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  margin-bottom: 7.5rem;
 }
 
-.pragraph {
-  text-align: center;
-  margin: 300px 0px;
-}
-.text1 {
-  text-align: center;
-  margin: 30px 0px;
-}
-.text2 {
-  text-align: justify;
-  margin: 0px 350px;
-}
-.links {
-  text-decoration: none;
-  font-size: larger;
-  color: #333333;
-}
-.emails {
-  margin: 50px 0px;
-}

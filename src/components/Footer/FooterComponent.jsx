@@ -8,16 +8,16 @@ const FooterComponent = () => {
     <footer className="footer-container">
       <img src={Logo} alt="logo" className="logo" />
 
-      <div class="center-side">
-        <p class="first-line">Aenean egestas libero amet vulputate.</p>
-        <p class="second-line">© 2022 Bonnie Hong. All Rights Reserved.</p>
+      <div className="center-side">
+        <p className="first-line">Aenean egestas libero amet vulputate.</p>
+        <p className="second-line">© 2022 Bonnie Hong. All Rights Reserved.</p>
       </div>
       <div className="footer-pages-links">
-        <NavLink to="/home">FAQ</NavLink>
+        <NavLink to="/faq">FAQ</NavLink>
         <NavLink to="/feedback">Feedback</NavLink>
         <NavLink to="/about">About us</NavLink>
       </div>
-      <div class="right-side">
+      <div className="right-side">
         <Link className="footer-icons" to="#">
           <FaInstagram />
         </Link>

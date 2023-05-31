@@ -3,39 +3,38 @@ import Navbar from "../../components/Navbar/Navbar";
 import { FaChevronDown } from "react-icons/fa";
 // import { FaShoppingCart } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
-
-const handleOnClick = () => {
-  const chevron = document.querySelector("#chevron");
-  // console.log(chevron);
-  const list = document.querySelector(".setting-list");
-  list.classList.toggle("show-setting-list");
-  chevron.classList.toggle("chevron-down");
-};
+import profileImage from "./../../assets/profile/profile-Image.svg";
+// const handleOnClick = () => {
+//   const chevron = document.querySelector("#chevron");
+//   // console.log(chevron);
+//   const list = document.querySelector(".setting-list");
+//   list.classList.toggle("show-setting-list");
+//   chevron.classList.toggle("chevron-down");
+// };
 
 const Profile = ({ user }) => {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="profile">
-        <div className="profile-section">
-          <h2>Hi, {user.name}</h2>
+
+          <h2 className="name">{user.name}</h2>
           <img
-            src="https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80"
             alt=""
+            src={profileImage}
             className="profile-img"
           />
-        </div>
         <div className="profile-section">
           <div className="info">
             <div className="setting">
-              <IoMdSettings /> <span>Setting</span>
-              <FaChevronDown
-                onClick={handleOnClick}
+              <IoMdSettings className="fs-3 icon"/> <span className="setting-label">Setting</span>
+              <FaChevronDown 
+                // onClick={handleOnClick}
                 id="chevron"
-                className="icon"
+                className="fs-3 icon"
               />
             </div>
-            <ul className="list-group setting-list">
+            <ul className="list-group setting-list" id="profile-list-group">
               <li className="list-group-item">
                 <button
                   type="btn"
@@ -100,27 +99,27 @@ const Profile = ({ user }) => {
             </div>
             <div className="modal-body d-flex flex-column align-items-center ">
               <form className="w-75">
-                <div class="form-group mb-3">
-                  <label for="name ">Email address</label>
+                <div className="form-group mb-3">
+                  <label htmlFor="name ">Email address</label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="name"
                     // aria-describedby="emailHelp"
                     placeholder="Enter Your Name"
                   />
                 </div>
-                <div class="form-group mb-3">
-                  <label for="password">Password</label>
+                <div className="form-group mb-3">
+                  <label htmlFor="password">Password</label>
                   <input
                     type="password"
-                    class="form-control"
+                    className="form-control"
                     // id="exampleInputPassword1"
                     placeholder="Password"
                   />
                 </div>
 
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" className="btn btn-primary">
                   Submit
                 </button>
               </form>
@@ -140,35 +139,35 @@ const Profile = ({ user }) => {
             </div>
             <div className="modal-body d-flex flex-column align-items-center ">
               <form className="w-75">
-                <div class="form-group mb-3">
-                  <label for="old-address">Old address</label>
+                <div className="form-group mb-3">
+                  <label htmlFor="old-address">Old address</label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="old-address"
                     // aria-describedby="emailHelp"
                   />
                 </div>
-                <div class="form-group mb-3">
-                  <label for="new-address">New address</label>
+                <div className="form-group mb-3">
+                  <label htmlFor="new-address">New address</label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="new-address"
                     // aria-describedby="emailHelp"
                   />
                 </div>
-                <div class="form-group mb-3">
-                  <label for="password">Your Password</label>
+                <div className="form-group mb-3">
+                  <label htmlFor="password">Your Password</label>
                   <input
                     type="password"
-                    class="form-control"
+                    className="form-control"
                     // id="exampleInputPassword1"
                     placeholder="Password"
                   />
                 </div>
 
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" className="btn btn-primary">
                   Submit
                 </button>
               </form>

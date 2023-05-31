@@ -5,6 +5,7 @@
 .items-container {
   overflow: hidden;
   /* width: 90%; */
+  padding: 3.5rem;
   margin: auto;
 }
 .items-list {

@@ -2,11 +2,17 @@ import "./Home.css";
 import heroImage from "./../../assets/home/hero-img.jpg";
 import productImageOne from "./../../assets/home/pet-tracker-one.jpg";
 import productImageTwo from "./../../assets/home/pet-tracker-two.jpg";
-
-function Home() {
+import Navigation from "../../components/Navigation/Navigation";
+import Carousel from "../../components/Carousel/Carousel";
+import FooterComponent from "../../components/Footer/FooterComponent";
+import Navbar from "../../components/Navbar/Navbar";
+const Home = ({ products }) => {
   return (
-    <section>
-      <div className="hero">
+    <div className="home">
+      <Navbar />
+
+      <Navigation />
+      <section className="hero">
         <div className="intro">
           <div className="left-side">
             <h1>
@@ -19,9 +25,9 @@ function Home() {
               <br />
               duis cursus vestibulum, facilisi ac, sed faucibus.
             </p>
-            <button type="submit" className="btn btn-primary btn-shop">
+            <a href="#products" className="btn-shop">
               Shop Now
-            </button>
+            </a>
           </div>
           <div>
             <img
@@ -31,8 +37,8 @@ function Home() {
             />
           </div>
         </div>
-      </div>
-      <div className="main-product background-gc">
+      </section>
+      <section className="main-product background-gc">
         <h1 className="text-center main-product-desc">
           Track your pet's adventures
           <br /> with our GPS tracker
@@ -61,8 +67,63 @@ function Home() {
             />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="py-5" id="products">
+        <div className="categories">
+          <button className="btn btn-primary category-btn submit-btn">
+            GPS tracker
+          </button>
+          <button className="btn btn-primary category-btn submit-btn">
+            Dry food
+          </button>
+          <button className="btn btn-primary category-btn submit-btn">
+            Shampoo
+          </button>
+          <button className="btn btn-primary category-btn submit-btn">
+            Dishes
+          </button>
+        </div>
+        <div className="products-carousel">
+          <Carousel items={products} />
+        </div>
+        <div className="products-carousel-two">
+          <Carousel items={products} />
+        </div>
+      </section>
+
+      <section className="privilages">
+        <div className="privilage">
+          <h3 className="privilages-heading">Free shipping</h3>
+          <p className="privilages-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
+            eos voluptate ullam totam deleniti vel.
+          </p>
+        </div>
+        <div className="privilage">
+          <h3 className="privilages-heading">Fast delivery</h3>
+          <p className="privilages-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
+            eos voluptate ullam totam deleniti vel.
+          </p>
+        </div>
+        <div className="privilage">
+          <h3 className="privilages-heading">Best prices</h3>
+          <p className="privilages-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
+            eos voluptate ullam totam deleniti vel.
+          </p>
+        </div>
+        <div className="privilage">
+          <h3 className="privilages-heading">customer support</h3>
+          <p className="privilages-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
+            eos voluptate ullam totam deleniti vel.
+          </p>
+        </div>
+      </section>
+
+      <FooterComponent />
+    </div>
   );
-}
+};
 export default Home;
