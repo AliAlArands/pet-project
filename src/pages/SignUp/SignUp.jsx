@@ -38,72 +38,71 @@ const SignUp = () => {
               <div className="line-between"></div>
             </div>
             <div className="d-flex justify-content-between algin-items-center">
-        <Form className="sign-up-form mt-3">
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label className="label-bold">
-              Email address or username
-            </Form.Label>
-            <div className="input-container">
-              <FaUser className="input-signup-icon" />
-              <Form.Control
-                type="email"
-                className="specified-input user-input"
-                placeholder="Type name"
-              />
-            </div>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label className="label-bold">Password</Form.Label>
-            <div className="input-container">
-              <FaLock className="input-signup-icon" />
-              <Form.Control
-                type="password"
-                className="specified-input"
-                placeholder="*******************"
-              />
-            </div>
-          </Form.Group>
-          <Form.Group className="mb-5" controlId="formBasicPassword">
-            <Form.Label className="label-bold">Confirm Password</Form.Label>
-            <div className="input-container">
-              <FaLock className="input-signup-icon" />
-              <Form.Control
-                type="password"
-                className="specified-input"
-                placeholder="*******************"
-              />
-            </div>
-          </Form.Group>
-          <div className="d-flex justify-content-center flex-column align-items-center ">
-            <Button
-              variant="primary"
-              type="submit"
-              className="w-100 mb-3 submit-btn"
-            >
-              Create Account <BsArrowRight />
-            </Button>
-            <Form.Text className="text-muted d-flex justify-content-center w-100 px-5">
-              <p className="me-2">I have an account!</p>
-              <a href="#" className="link">
-                Sign in
-              </a>
-            </Form.Text>
-          </div>
-        </Form>
+              <Form className="sign-up-form">
+                <Form.Group className="sign-up-form-group" controlId="formBasicEmail">
+                  <Form.Label className="label-bold">
+                    Email address or username
+                  </Form.Label>
+                  <div className="input-container">
+                    <FaUser className="input-signup-icon" />
+                    <Form.Control
+                      type="email"
+                      className="specified-input user-input"
+                      placeholder="Type name"
+                    />
+                  </div>
+                </Form.Group>
+                <Form.Group className="sign-up-form-group" controlId="formBasicPassword">
+                  <Form.Label className="label-bold">Password</Form.Label>
+                  <div className="input-container">
+                    <FaLock className="input-signup-icon" />
+                    <Form.Control
+                      type="password"
+                      className="specified-input"
+                      placeholder="*******************"
+                    />
+                  </div>
+                </Form.Group>
+                <Form.Group className="last-sign-up-form-group" controlId="formBasicPassword">
+                  <Form.Label className="label-bold">Confirm Password</Form.Label>
+                  <div className="input-container">
+                    <FaLock className="input-signup-icon" />
+                    <Form.Control
+                      type="password"
+                      className="specified-input"
+                      placeholder="*******************"
+                    />
+                  </div>
+                </Form.Group>
+                <div className="d-flex justify-content-center flex-column align-items-center ">
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    className="w-100 mb-3 submit-btn"
+                  >
+                    Create Account <BsArrowRight />
+                  </Button>
+                  <Form.Text className="have-account">
+                    <p className="me-2">I have an account!</p>
+                    <a href="#" className="link">
+                      Sign in
+                    </a>
+                  </Form.Text>
+                </div>
+              </Form>
 
-        <img src={boyWithDog} alt="" className="register-image" />
-      </div>
+            </div>
           </div>
           <div className="second-section">
-            <div className="mb-5 mt-0 log-in-title text-start title">
+            <div className="welcome">
               Welcome
             </div>
-            <img src={register} alt="" />
+            <img src={register} alt="" className="sign-up-image" />
           </div>
         </div>
       </div>
 
-      
+
     </>
   );
 };

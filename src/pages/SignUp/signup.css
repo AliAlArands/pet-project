@@ -2,7 +2,9 @@
   padding-left: 150px !important;
   padding-right: 112px !important;
 }
+
 .signup-page-flex {
+  /* height: auto; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,6 +16,7 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 10px;
+  /* width: 100%; */
 }
 
 .link-social-register {
@@ -32,7 +35,7 @@
 .google-register-icon {
   width: 24px;
   height: 24px;
-} 
+}
 
 .google-register-link {
   margin-right: 10px;
@@ -52,6 +55,7 @@
   justify-content: center;
   margin-bottom: 15px;
 }
+
 .or {
   color: #206ef6;
   font-weight: 700;
@@ -66,14 +70,28 @@
 }
 
 .sign-up-form {
-  width: 33%;
+  width: 100%;
   margin-right: auto;
+  background-color: white !important;
+  padding: 44px 35px 16px;
+}
+
+.sign-up-form-group {
+  margin-bottom: 25px;
+}
+
+.last-sign-up-form-group {
+  margin-bottom: 40px;
 }
 
 
-
-
-
+.have-account {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.4rem !important;
+  font-weight: 400 !important;
+  line-height: 36px !important;
+}
 
 .no-border {
   border: none !important;
@@ -81,7 +99,7 @@
 
 .input-container {
   border: 1px solid gainsboro;
-  border-radius: 6px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,13 +110,16 @@
   border: 0 !important;
   box-shadow: none !important;
   background-color: transparent !important;
-  height: 45px;
-  /* padding: 4px 10px !important; */
+  font-size: 1.6rem !important;
+  font-weight: 500 !important;
+  /* height: 45px; */
+
+  padding: 15px 10px !important;
 }
 
 .specified-input::placeholder {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 500;
 
   padding: 10px 0 !important;
 }
@@ -107,17 +128,34 @@
   /* font-size: 16px; */
   font-weight: normal;
 }
+
 .input-signup-icon {
   color: rgba(187, 190, 199);
+  font-size: 2rem;
 }
 
 /* .link-social-register:hover {
 
 } */
 
+.second-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.welcome {
+  font-size: 8rem;
+  font-weight: 700;
+  /* line-height: 28px; */
+  margin-bottom: 210px;
 
-.register-image {
-  margin-right: auto;
-  /* background-color : none; */
+}
+
+.sign-up-image {
+  width: 100%;
+  height: 440px;
+  object-fit: contain;
 }

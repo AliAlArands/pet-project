@@ -88,6 +88,7 @@ a {
   border-radius: 10px !important;
   font-size: 2.8rem !important;
   font-weight: 700 !important;
+  border: 2px solid #3C1DA9 !important;
 }
 
 .customized-input {
