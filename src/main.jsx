@@ -18,6 +18,7 @@ import NewPassword from "./pages/NewPassword/NewPassword.jsx";
 import Fqa from "./pages/FQA/Fqa.jsx";
 import Feedback from "./pages/Feedback/Feedback.jsx";
 import About from "./pages/About/About.jsx";
+import ProductComponent from "./components/ProductComponent/productComponent.jsx";
 
 const user = {
   name: "Sara Ahmad",
@@ -177,6 +178,10 @@ const AppWrapper = () => {
         {
           path: "/about",
           element: <About/>
+        },
+        {
+          path: "/products/:id",
+          element: <ProductComponent/>
         }
       ],
     },

@@ -4,9 +4,15 @@ import { AiOutlinePlusSquare, AiOutlineMinusSquare } from "react-icons/ai";
 import { FaArrowLeft } from "react-icons/fa";
 import { BsStarFill } from "react-icons/bs";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
-const ProductComponent = ({ product }) => {
-  const stars = Array(product.stars).fill(1); // Create an array with the specified count
+const ProductComponent = () => {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const dataString = params.get('data');
+  const dataObject = JSON.parse(decodeURIComponent(dataString));
+
+  const stars = Array(dataObject.stars).fill(1); // Create an array with the specified count
   const [count, setCount] = useState(1);
   const addOne = () => {
     setCount(count + 1);
@@ -31,7 +37,7 @@ const ProductComponent = ({ product }) => {
             <img src={dogFood} alt="" className="product-page-image" />
           </div>
           <div className="product-second-section">
-            <h1 className="product-title">{product.title}</h1>
+            <h1 className="product-title">{dataObject.title}</h1>
             <div className="product-category-and-stars">
               <span className="product-category">CAT FOOD</span>
               <span className="product-stars">
@@ -43,7 +49,7 @@ const ProductComponent = ({ product }) => {
 
             <div className="product-page-description">
               <p>Description</p>
-              <p>{product.description}</p>
+              <p>{dataObject.description}</p>
             </div>
 
             <div className="add-product-to-card">
@@ -57,7 +63,7 @@ const ProductComponent = ({ product }) => {
                   <AiOutlinePlusSquare onClick={addOne} />
                 </span>
               </div>
-              <div className="product-page-price">{product.price}</div>
+              <div className="product-page-price">{dataObject.price}</div>
             </div>
             <div className="d-flex justify-content-center algin-items-center">
               <button className="btn btn-add-to-card-product-page">

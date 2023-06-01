@@ -103,8 +103,8 @@ const Home = ({ products }) => {
         <div className="products-carousel-two">
           <Carousel items={products} />
         </div> */}
-        {apiProducts.map((product) => {
-          return <Card product={product}/>;
+        {products.map((product) => {
+          return <Card product={product} />;
         })}
       </section>
 
