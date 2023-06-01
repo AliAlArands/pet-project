@@ -34,10 +34,10 @@ const product = {
 function App() {
   return (
     <div>
-      {/* <Outlet/> */}
+      <Outlet/>
       {/* <ProductComponent product={product}/> */}
       {/* <Checkout/> */}
-      <SignUp/>
+      {/* <SignUp/> */}
     </div>
   );
 }

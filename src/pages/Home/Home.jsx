@@ -9,7 +9,23 @@ import Navbar from "../../components/Navbar/Navbar";
 import heroImage from "./../../assets/home/homePagePhoto.svg";
 import catWithBook from "./../../assets/home/catWithBook.svg";
 import fedingCat from "./../../assets/home/fedingCat.svg";
+import { useEffect, useState } from "react";
+import petStore from "../../apis/petStore";
+import Card from "../../components/Card/Card";
 const Home = ({ products }) => {
+  const [apiProducts, setApiProducts] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        await petStore.get("/products").then((res) => {
+          setApiProducts(res.data);
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <div className="home">
       <Navbar />
@@ -48,11 +64,7 @@ const Home = ({ products }) => {
               ultricies. Id ornare turpis vulputate enim sed magna sit. A id
               cursus
             </p>
-            <img
-              src={catWithBook}
-              alt=""
-              className="product-description-svg"
-            />
+            <img src={catWithBook} alt="" className="product-description-svg" />
           </div>
           <div className="product-image">
             <img
@@ -80,18 +92,10 @@ const Home = ({ products }) => {
       </section>
       <section className="products" id="products">
         <div className="categories">
-          <button className="category-btn">
-            GPS tracker
-          </button>
-          <button className="category-btn">
-            Dry food
-          </button>
-          <button className="category-btn">
-            Shampoo
-          </button>
-          <button className="category-btn">
-            Dishes
-          </button>
+          <button className="category-btn">GPS tracker</button>
+          <button className="category-btn">Dry food</button>
+          <button className="category-btn">Shampoo</button>
+          <button className="category-btn">Dishes</button>
         </div>
         {/* <div className="products-carousel">
           <Carousel items={products} />
@@ -99,6 +103,9 @@ const Home = ({ products }) => {
         <div className="products-carousel-two">
           <Carousel items={products} />
         </div> */}
+        {products.map((product) => {
+          return <Card product={product}/>;
+        })}
       </section>
 
       <section className="privilages">
