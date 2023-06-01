@@ -10,16 +10,16 @@
   color: #6d7280;
   font-weight: 400;
   font-size: 2rem;
-  line-height: 3rem;
-  margin-bottom: 7.5rem;
+  line-height: 30px;
+  margin-bottom: 75px;
 }
 .support-input {
   width: 100%;
-  border-radius: 2rem;
+  border-radius: 20px;
   outline: 0;
   border: 1px black solid;
   font-size: 3rem;
-  padding: 1rem 2rem;
-  margin-bottom: 7.5rem;
+  padding: 10px 20px;
+  margin-bottom: 75px;
 }
 

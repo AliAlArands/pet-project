@@ -1,50 +1,74 @@
-import React from "react";
-import './ProductComponent.css';
-import Group from './../../assets/Group.png';
-const ProductComponent = () => {
-    return (
-        <>
-       
-        <div className="container">
-        <div className="left">
-            <img src={Group} alt=""/>
+import dogFood from "./../../assets/products/dogFood.jpg";
+import "./productComponent.css";
+import { AiOutlinePlusSquare, AiOutlineMinusSquare } from "react-icons/ai";
+import { FaArrowLeft } from "react-icons/fa";
+import { BsStarFill } from "react-icons/bs";
+import { useState } from "react";
+
+const ProductComponent = ({ product }) => {
+  const stars = Array(product.stars).fill(1); // Create an array with the specified count
+  const [count, setCount] = useState(1);
+  const addOne = () => {
+    setCount(count + 1);
+  };
+
+  const minusOne = () => {
+    if (count === 1) return;
+    setCount(count - 1);
+  };
+  return (
+    <>
+      <div className="product-container-page ">
+        <div className="back-to-list">
+          <FaArrowLeft className="back-to-list-icon" />
+          <a href="" className="back-to-list-link">
+            {" "}
+            back to list
+          </a>
         </div>
-        <div className="right">
-            <div className="right-content">
-                <div className="first">
-                    <h1>Product Name</h1>
-                    <div className="star">
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                    </div>
-                    <p className="sold">sold(250)</p>
-                    <p className="price">20 $</p>
-                </div>
-                <div className="second">
-                    <p className="title">description</p>
-                </div>
-                <div className="description">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim lorem hac a ultricies. Id ornare
-                        turpis vulputate enim sed magna sit. A id cursus dolor urna. Aliquam diam integer vitae eget.
-                        Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit. Enim lorem hac a ultricies. Id ornare turpis
-                        vulputate enim sed magna sit. A id cursus dolor urna.
-                    </p>
-                </div>
+        <div className="product-page">
+          <div className="product-first-section">
+            <img src={dogFood} alt="" className="product-page-image" />
+          </div>
+          <div className="product-second-section">
+            <h1 className="product-title">{product.title}</h1>
+            <div className="product-category-and-stars">
+              <span className="product-category">CAT FOOD</span>
+              <span className="product-stars">
+                {stars.map((star, index) => (
+                  <BsStarFill key={index} />
+                ))}
+              </span>
             </div>
+
+            <div className="product-page-description">
+              <p>Description</p>
+              <p>{product.description}</p>
+            </div>
+
+            <div className="add-product-to-card">
+              <div className="product-page-cart">
+                <span>Qty:</span>{" "}
+                <span className="product-page-icon">
+                  <AiOutlineMinusSquare onClick={minusOne} />
+                </span>{" "}
+                <span className="product-counts">{count}</span>{" "}
+                <span className="product-page-icon">
+                  <AiOutlinePlusSquare onClick={addOne} />
+                </span>
+              </div>
+              <div className="product-page-price">{product.price}</div>
+            </div>
+            <div className="d-flex justify-content-center algin-items-center">
+              <button className="btn btn-add-to-card-product-page">
+                ADD TO CARD
+              </button>
+            </div>
+          </div>
         </div>
-    </div>
-    <div className="add">
-        <select name="select" id="select">
-            <option value="1">1</option>
-        </select>
-        <button>Add To Cart</button>
-    </div>
+      </div>
     </>
-    );
-}
+  );
+};
+
 export default ProductComponent;

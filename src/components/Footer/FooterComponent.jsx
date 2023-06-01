@@ -10,20 +10,20 @@ const FooterComponent = () => {
 
       <div className="center-side">
         <p className="first-line">Aenean egestas libero amet vulputate.</p>
+        <div className="footer-icons">
+          <Link className="footer-icon" to="#">
+            <FaInstagram />
+          </Link>
+          <Link className="footer-icon" to="#">
+            <FaLinkedinIn />
+          </Link>
+        </div>
         <p className="second-line">© 2022 Bonnie Hong. All Rights Reserved.</p>
       </div>
       <div className="footer-pages-links">
         <NavLink to="/faq">FAQ</NavLink>
         <NavLink to="/feedback">Feedback</NavLink>
         <NavLink to="/about">About us</NavLink>
-      </div>
-      <div className="right-side">
-        <Link className="footer-icons" to="#">
-          <FaInstagram />
-        </Link>
-        <Link className="footer-icons" to="#">
-          <FaLinkedinIn />
-        </Link>
       </div>
     </footer>
   );

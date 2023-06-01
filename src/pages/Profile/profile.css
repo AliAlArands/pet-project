@@ -7,9 +7,9 @@
 }
 
 .name {
-  margin-top: 11rem;
-  margin-left: 14.5rem;
-  margin-bottom: 5rem;
+  margin-top: 110px;
+  margin-left: 145px;
+  margin-bottom: 50px;
   font-size: 5rem;
   font-weight: 700;
   /* margin-right: auto; */
@@ -21,8 +21,8 @@
   height: 360px;
   object-fit: cover;
   overflow: hidden;
-  margin-bottom: 5rem;
-  border-radius: 2rem;
+  margin-bottom: 50px;
+  border-radius: 20px;
   /* margin-top: 3rem; */
   /* background-size: cover; */
 }
@@ -42,7 +42,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgba(32, 110, 246, 1);
-  padding: 1rem 2rem;
+  padding: 10px 20px;
 }
 
 .setting-label {
@@ -69,11 +69,11 @@
   /* display: none !important; */
   /* opacity: 0; */
   transition: all 0.3s linear;
-  margin-bottom: 15rem !important;
+  margin-bottom: 150px !important;
 }
 
 .setting-list .list-group-item {
-  margin-bottom: 0.3rem;
+  margin-bottom: 3px;
   opacity: 67% !important;
 }
 .setting-list .list-group-item .btn {

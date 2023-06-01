@@ -5,13 +5,13 @@
 }
 
 .accordion-item {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 15px !important;
 }
 
 .accordion-header button{
   font-size: 2rem !important;
   font-weight: 400 !important;
-  line-height: 3rem !important;
+  line-height: 30px !important;
 }
 
 .accordion-body,

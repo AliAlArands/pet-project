@@ -8,6 +8,7 @@ import FooterComponent from "../../components/Footer/FooterComponent";
 import Navbar from "../../components/Navbar/Navbar";
 import heroImage from "./../../assets/home/homePagePhoto.svg";
 import catWithBook from "./../../assets/home/catWithBook.svg";
+import fedingCat from "./../../assets/home/fedingCat.svg";
 const Home = ({ products }) => {
   return (
     <div className="home">
@@ -47,7 +48,11 @@ const Home = ({ products }) => {
               ultricies. Id ornare turpis vulputate enim sed magna sit. A id
               cursus
             </p>
-            <img src={catWithBook} alt="" className="product-description-image" />
+            <img
+              src={catWithBook}
+              alt=""
+              className="product-description-svg"
+            />
           </div>
           <div className="product-image">
             <img
@@ -57,39 +62,43 @@ const Home = ({ products }) => {
           </div>
         </div>
         <div className="product-description">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. ultricies.
-            Id ornare turpis vulputate enim sed magna sit. A id cursus{" "}
-          </p>
           <div className="product-image">
             <img
               src={productImageTwo}
               alt="pet tracker product, pet store product, tracker, pet tracker"
             />
           </div>
+          <div className="product-description-box">
+            <p className="product-description-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              ultricies. Id ornare turpis vulputate enim sed magna sit. A id
+              cursus
+            </p>
+            <img src={fedingCat} alt="" className="product-description-svg" />
+          </div>
         </div>
       </section>
-      <section className="py-5" id="products">
+      <section className="products" id="products">
         <div className="categories">
-          <button className="btn btn-primary category-btn submit-btn">
+          <button className="category-btn">
             GPS tracker
           </button>
-          <button className="btn btn-primary category-btn submit-btn">
+          <button className="category-btn">
             Dry food
           </button>
-          <button className="btn btn-primary category-btn submit-btn">
+          <button className="category-btn">
             Shampoo
           </button>
-          <button className="btn btn-primary category-btn submit-btn">
+          <button className="category-btn">
             Dishes
           </button>
         </div>
-        <div className="products-carousel">
+        {/* <div className="products-carousel">
           <Carousel items={products} />
         </div>
         <div className="products-carousel-two">
           <Carousel items={products} />
-        </div>
+        </div> */}
       </section>
 
       <section className="privilages">

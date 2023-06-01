@@ -9,7 +9,7 @@ const Verify = () => {
         <form className="form text-center verify-form" action="" method="POST">
           <div className="title verify-title">Enter Verification Code</div>
           <div className="mb-4">
-            <input type="text" maxlength="4" class="mb-3 customized-input input-field" />
+            <input type="text" maxlength="4" class="mb-3 customized-input input-verify-field" />
             <p>
               If You Dont Recieve code{" "}
               <a href="#" className="link">

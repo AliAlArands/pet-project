@@ -1,25 +1,68 @@
-.social-register {
-  width: 70%;
-  /* margin: 0 100px; */
-}
-
 .contain-register {
-  padding-left: 7.3% !important;
+  padding-left: 150px !important;
+  padding-right: 112px !important;
 }
-.link-social-register {
-  /* border: 1px solid black !important; */
-  /* width: 50%; */
-  margin: 0;
-  padding: 0.5rem 1rem;
-  border-radius: 15px !important;
+.signup-page-flex {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  font-size: 1.5rem;
-  font-weight: 700;
-  width: 48.7%;
-  box-shadow: 0px 0px 10px 0px gainsboro;
+  justify-content: space-between;
+}
 
+.social-media-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.link-social-register {
+  margin-bottom: 14px;
+  padding: 10px 65px;
+  border-radius: 10px !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2.4rem;
+  font-weight: 700;
+  width: 86.7%;
+  box-shadow: 0px 0px 10px 0px gainsboro;
+}
+
+.google-register-icon {
+  width: 24px;
+  height: 24px;
+} 
+
+.google-register-link {
+  margin-right: 10px;
+}
+
+.facebook {
+  background-color: white;
+}
+
+.facebook-register-icon {
+  color: #206ef6;
+}
+
+.or-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.or {
+  color: #206ef6;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.line-between {
+  width: 39%;
+
+  margin: 10px;
+  border: 1px dashed #206ef6;
 }
 
 .sign-up-form {
@@ -27,24 +70,11 @@
   margin-right: auto;
 }
 
-.facebook {
-  /* background-color: rgba(204, 204, 204, 0.15) !important; */
-  background-color: white;
-}
 
-.google-register-link {
-  /* align-self: flex-start; */
-  margin-right: 1rem;
-  color: white;
-}
 
-.google-register-icon {
-  color: white;
-}
 
-.facebook-register-icon {
-  color: #206ef6;
-}
+
+
 .no-border {
   border: none !important;
 }
@@ -85,19 +115,6 @@
 
 } */
 
-.or {
-  color: #206ef6;
-  font-weight: 700;
-}
-
-.line-between {
-  width: 25%;
-  /* height: 1px; */
-  /* background-color: black; */
-  margin: 10px;
-  /* display: inline-block; */
-  border: 1px dashed #206ef6;
-}
 
 
 .register-image {

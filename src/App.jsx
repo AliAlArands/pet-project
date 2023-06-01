@@ -20,6 +20,8 @@ import SignUp from "./pages/SignUp/SignUp";
 import Cart from "./pages/Cart/Cart";
 import SmallCard from "./components/SmallCard/SmallCard";
 import { Outlet } from "react-router-dom";
+import ProductComponent from "./components/ProductComponent/productComponent";
+// import NewProduct from "./components/ProductComponent/NewProduct";
 
 const product = {
   title: "dry food",
@@ -29,13 +31,13 @@ const product = {
   price: "20$",
 };
 
-
-
 function App() {
   return (
     <div>
-      <Outlet/>
-      
+      {/* <Outlet/> */}
+      {/* <ProductComponent product={product}/> */}
+      {/* <Checkout/> */}
+      <SignUp/>
     </div>
   );
 }

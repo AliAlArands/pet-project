@@ -26,7 +26,7 @@ a {
 .form {
   /* width: 30%; */
   margin: 100px auto;
-  padding: 2rem;
+  padding: 20px;
   /* border: 1px solid rgba(181, 181, 181, 1); */
   border-radius: 10px !important;
   box-shadow: 4px 6px 10px 1px rgba(128, 128, 128, 0.2);
@@ -60,7 +60,7 @@ a {
 .title {
   font-weight: 700;
   font-size: 4.4rem;
-  margin-bottom: 5rem;
+  margin-bottom: 50px;
 }
 
 .large-title {
@@ -85,20 +85,24 @@ a {
 
 .submit-btn {
   /* padding: 20px 180px !important; */
-  border-radius: 1rem !important;
+  border-radius: 10px !important;
   font-size: 2.8rem !important;
   font-weight: 700 !important;
 }
 
 .customized-input {
   font-size: 2rem !important;
-  padding-top: 1.1rem !important;
-  padding-bottom: 1.1rem !important;
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
 }
 
 .pages-btn {
-  border-radius: 2rem !important;
+  border-radius: 20px !important;
   border: 3px solid #3c1da9;
-  padding: 2rem 10rem !important;
+  padding: 20px 100px !important;
   color: #ffffff;
+}
+
+.display-box-shadow {
+  box-shadow: 4px 6px 10px 1px rgba(128, 128, 128, 0.2);
 }

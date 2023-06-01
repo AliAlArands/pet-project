@@ -60,6 +60,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 75px;
 }
 
 .product-description-box {
@@ -67,8 +68,8 @@
 }
 
 .product-description-image {
-  width: 27rem;
-  height: 21rem;
+  width: 270px;
+  height: 210px;
   object-fit: cover;
   margin: 80px;
 }
@@ -76,11 +77,14 @@
 .product-description-text {
   font-size: 2.4rem;
   font-weight: 400;
-  line-height: 2.4rem ;
+  line-height: 30px;
   text-align: left;
   color: rgba(109, 114, 128, 1);
 }
-
+.product-description-svg {
+  /* width: 100%; */
+  object-fit: contain;
+}
 .product-description .product-image {
   width: 39%;
 }
@@ -91,40 +95,42 @@
   object-fit: cover;
   /* margin-right: 0; */
 }
+/* Products */
 
-.product-description p {
-  /* width: 30%; */
-  /* font-family: Futura Round; */
-  font-size: 2.4rem;
-  font-weight: 400;
-  line-height: 2.4rem;
-  letter-spacing: 0px;
-  text-align: left;
+.products {
+  padding: 75px;
+  padding-bottom: 106px;
 }
 
-/* Products */
 .categories {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .category-btn {
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 4.2rem;
+  text-align: center;
+  padding: 20px 55px;
+  color: rgba(109, 114, 128, 1);
   transition: all 0.3s linear !important;
+  background-color: white;
 }
 
-.category-btn:hover {
+.category-btn:hover , .category-btn:focus {
   background-color: white !important;
   color: rgba(32, 110, 246, 1) !important;
 }
 
 .products-carousel {
   /* padding: 0 7.5rem; */
-  margin-bottom: 20rem !important;
+  margin-bottom: 70px !important;
 }
 
 .products-carousel-two {
-  margin-bottom: 7.5rem !important;
+  margin-bottom: 50px !important;
   /* padding: 0 7.5rem; */
 }
 
@@ -132,25 +138,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 7.5rem;
+  padding: 0 75px;
 }
 
 .privilage {
   width: 20%;
-  margin-bottom: 12.5rem;
+  margin-bottom: 125px;
 }
 
 .privilages-heading {
   color: rgba(32, 110, 246, 1);
   font-weight: 400;
   font-size: 2.2rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 6px;
 }
 
 .privilages-text {
-  padding: 1rem 0;
+  padding: 10px 0;
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 1.9rem;
+  line-height: 19px;
   color: rgba(109, 114, 128, 1);
 }

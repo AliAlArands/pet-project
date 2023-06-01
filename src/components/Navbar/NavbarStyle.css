@@ -1,11 +1,11 @@
 .pet-store-navbar {
-  padding: 2rem 5%;
+  padding: 20px 5%;
   background-color: rgba(248, 248, 248, 1);
 }
 
 .logo {
-  width: 7.7rem;
-  height: 3.4rem;
+  width: 77px;
+  height: 34px;
 }
 .search-container {
   width: 34%;
@@ -16,7 +16,7 @@
   border: none;
   background: #e7e7e7;
   border-radius: 15px 0px 0px 15px;
-  padding: 1.4rem 2rem;
+  padding: 14px 20px;
   width: 81%;
   outline: none;
   font-size: 1rem;
@@ -31,7 +31,7 @@
   border: none;
   background: rgba(32, 110, 246, 1);
   border-radius: 0px 15px 15px 0px;
-  padding: 1rem 2rem;
+  padding: 10px 20px;
   width: 19%;
 }
 
@@ -43,8 +43,8 @@
 }
 
 .icons .icon {
-  width: 2.5rem;
-  height: 3rem;
+  width: 25px;
+  height: 30px;
   object-fit: cover;
   cursor: pointer;
 }

@@ -14,8 +14,8 @@
   transition: all 0.3s linear;
   font-size: 2.2rem;
   font-weight: 500;
-  line-height: 2.7rem;
-  padding: 3rem 0 1.3rem 0;
+  line-height: 27px;
+  padding: 30px 0 13px 0;
 }
 
 .navigation-link:hover {
@@ -26,5 +26,5 @@
   font-weight: 700 !important;
   color: white !important;
   /* background-color: green; */
-    border-bottom: 0.7rem solid white;
+  border-bottom: 7px solid white;
 }
