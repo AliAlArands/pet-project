@@ -18,7 +18,7 @@ const Home = ({ products }) => {
     const fetchData = async () => {
       try {
         await petStore.get("/products").then((res) => {
-          setApiProducts(res.data);
+          setApiProducts(res.data.products);
         });
       } catch (err) {
         console.log(err);
@@ -103,7 +103,7 @@ const Home = ({ products }) => {
         <div className="products-carousel-two">
           <Carousel items={products} />
         </div> */}
-        {products.map((product) => {
+        {apiProducts.map((product) => {
           return <Card product={product}/>;
         })}
       </section>
