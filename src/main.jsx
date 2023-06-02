@@ -20,6 +20,7 @@ import Feedback from "./pages/Feedback/Feedback.jsx";
 import About from "./pages/About/About.jsx";
 import ProductComponent from "./components/ProductComponent/productComponent.jsx";
 import SignUp from "./pages/SignUp/SignUp.jsx";
+import Checkout from "./pages/CheckOut/CheckOut.jsx";
 
 const user = {
   name: "Sara Ahmad",
@@ -187,6 +188,10 @@ const AppWrapper = () => {
         {
           path: "/products/:id",
           element: <ProductComponent/>
+        },
+        {
+          path: "/checkout",
+          element: <Checkout/>
         }
       ],
     },

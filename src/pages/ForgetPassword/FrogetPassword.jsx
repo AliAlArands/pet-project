@@ -6,10 +6,10 @@ const ForgetPassword = () => {
   return (
     <>
     <Back/>
-      <div className="contain contain-forget background-gc">
-        <Form className="form forget-form px-5">
+      <div className="contain  background-gc contain-forget">
+        <Form className="form forget-form px-5 color-bg">
           <div className="title mx-auto">Forget Password</div>
-          <Form.Group className="form-group-forget-password w-100" controlId="formBasicEmail">
+          <Form.Group className="form-group-forget-password w-100 " controlId="formBasicEmail">
             <Form.Label className="label">Enter Your Email</Form.Label>
             <Form.Control type="email" placeholder="Enter email" className="customized-input"/>
           </Form.Group>

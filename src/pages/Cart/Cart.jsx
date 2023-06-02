@@ -63,8 +63,8 @@ const Cart = ({ products, deleteCartItem }) => {
                 />
               </div>
             </div>
-            <div className="check-out-btn">
-              <button type="btn" className="btn btn-primary w-100 submit-btn">
+            <div className="check-out-btn d-flex algin-items-center justify-content-center">
+              <button type="btn" className="btn btn-primary  submit-btn">
                 Check Out
               </button>
             </div>

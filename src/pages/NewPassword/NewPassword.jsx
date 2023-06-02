@@ -1,11 +1,13 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./newPassword.css";
+import Back from "../../components/BackComponent/Back";
 const NewPassword = () => {
   return (
     <>
-      <div className="background-gc contain">
-        <Form className="form new-password-form">
+      <Back/>
+      <div className="background-gc contain-new-password contain">
+        <Form className="form new-password-form color-bg">
           <div className="title">New Password</div>
           <Form.Group className="new-password-mb" controlId="formBasicEmail">
             <Form.Label className="label">New Password</Form.Label>

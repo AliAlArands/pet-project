@@ -70,9 +70,9 @@
   margin-left: 5%;
 }
 .check-out-btn button {
+  width: 50%;
   background-color: rgba(38, 207, 124, 1) !important;
-  border: 0;
-
+  border: 0 !important;
 }
 
 .check-out-btn button:hover {

@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-position-y: 166px, bottom !important;
+  background-position-x: -8% , right !important;
   /* margin: 0 auto; */
 }
 
@@ -71,7 +73,7 @@
   transition: all 0.3s linear;
   margin-bottom: 150px !important;
   position: relative;
-  display: none;
+  display: block;
   /* transition: all 0.3s linear; */
 }
 
@@ -93,5 +95,5 @@
   color: black !important;
 }
 .show-setting-list  {
-  display: block !important;
+  display: none !important;
 }

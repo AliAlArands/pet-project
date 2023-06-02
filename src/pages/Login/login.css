@@ -1,5 +1,7 @@
 .contain-login {
   padding: 100px 150px !important;
+  background-position-y: 100px, 95% !important;
+  background-position-x: -8%, right !important;
 }
 
 .log-in-title {

@@ -1,6 +1,8 @@
 .contain-register {
   padding-left: 150px !important;
   padding-right: 112px !important;
+  background-position-y: 10px, 95% !important;
+  background-position-x: -8%, right !important;
 }
 
 .signup-page-flex {

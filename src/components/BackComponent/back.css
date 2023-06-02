@@ -1,9 +1,11 @@
 .back {
     background-color: white;
     padding: 10px 0;
+    box-shadow: 0px 2px 10px 5px rgb(235, 228, 228);
 }
 
 .back-icon {
     font-size: 2rem;
+    margin-left: 20px;
     font-weight: bolder;
 }

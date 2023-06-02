@@ -15,10 +15,10 @@ const Checkout = () => {
   return (
     <>
       <Back />
-      <div className="checkout-container">
+      <div className=" background-gc checkout-container">
         <h2 className="checkout-header">payment methods</h2>
         <div className="sub-container d-flex justify-content-between align-items-center ">
-          <div className="left display-box-shadow">
+          <div className="left color-bg display-box-shadow">
             <div className="w-100 d-flex justify-content-center">
               <img src={cardImage} alt="image" className="payment-img" />
             </div>
@@ -86,7 +86,7 @@ const Checkout = () => {
               <img src={visa} alt="" />
             </div>
           </div>
-          <div className="right display-box-shadow">
+          <div className="right display-box-shadow color-bg">
             <div className="data-rec">
               <span>Product Total</span>
               <span className="data-rec-price">100$</span>

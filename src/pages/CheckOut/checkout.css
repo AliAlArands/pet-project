@@ -1,5 +1,8 @@
 .checkout-container {
   padding: 78px 75px 170px 75px;
+  background-position-y: 166px, bottom !important;
+  background-position-x: -8% , right !important;
+  /* position: absolute; */
 }
 
 .checkout-header {

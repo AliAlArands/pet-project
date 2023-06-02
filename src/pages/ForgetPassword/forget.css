@@ -1,16 +1,19 @@
 .forget-form {
-    width: 39% !important;
-    display: flex;
-    /* align-items: ; */
-    justify-content: center;
-    flex-direction: column;
-    /* margin: 0 a !important; */
+  width: 39% !important;
+  display: flex;
+  /* align-items: ; */
+  justify-content: center;
+  flex-direction: column;
+  /* margin: 0 a !important; */
 }
 
-.form-group-forget-password, .forget-btn {
-    margin-bottom: 70px;
+.form-group-forget-password,
+.forget-btn {
+  margin-bottom: 70px;
 }
 
 .contain-forget {
-    padding-bottom: 210px !important;
+  padding-bottom: 210px !important;
+  background-position-y: 166px, 120% !important;
+  background-position-x: -8%, right !important;
 }

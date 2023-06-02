@@ -3,6 +3,9 @@
   padding-bottom: 66px;
   display: flex;
   justify-content: space-between;
+  background-image: url(./../../assets/backgrounds/hero-background.svg);
+  background-position: right top -75px;
+  background-repeat: no-repeat;
 }
 
 .left-side {
@@ -50,6 +53,11 @@
   padding: 0 150px;
   padding-top: 130px;
   padding-bottom: 75px;
+  background-image: url(./../../assets/backgrounds/main-left-background.svg),
+    url(./../../assets/backgrounds/main-right-backgroud.svg);
+  background-position-x: -159px, right;
+  background-position-y: 224px, bottom;
+  background-repeat: no-repeat;
 }
 
 .main-product-desc {
@@ -119,7 +127,8 @@
   background-color: white;
 }
 
-.category-btn:hover , .category-btn:focus {
+.category-btn:hover,
+.category-btn:focus {
   background-color: white !important;
   color: rgba(32, 110, 246, 1) !important;
 }
@@ -159,4 +168,13 @@
   font-weight: 400;
   line-height: 19px;
   color: rgba(109, 114, 128, 1);
+}
+
+
+.sign-up-form {
+  border-radius: 10px !important;
+}
+
+.link-social-register {
+  background-color: white;
 }

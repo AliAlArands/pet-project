@@ -8,7 +8,7 @@ const Login = () => {
     <>
       <Navbar />
       <div className="d-flex justify-content-center align-items-center contain contain-login background-gc">
-        <Form className="form login-form">
+        <Form className="form login-form color-bg">
           <div className="title large-title log-in-title">Log In</div>
           <p className="welcome-label">Welcom Back.</p>
           <Form.Group className="mb-3" controlId="formBasicEmail">

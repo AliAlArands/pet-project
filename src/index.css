@@ -1,29 +1,25 @@
 @font-face {
-  font-family: 'futura_round';
-  src: url('./assets/pet-fonts/futura_round_bold-webfont.woff2') format('woff2'),
-    url('./assets/pet-fonts/futura_round_bold-webfont.woff') format('woff');
+  font-family: "futura_round";
+  src: url("./assets/pet-fonts/futura_round_bold-webfont.woff2") format("woff2"),
+    url("./assets/pet-fonts/futura_round_bold-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'futura_round';
-  src: url('./assets/pet-fonts/futura_round_demi-webfont.woff2') format('woff2'),
-    url('./assets/pet-fonts/futura_round_demi-webfont.woff') format('woff');
+  font-family: "futura_round";
+  src: url("./assets/pet-fonts/futura_round_demi-webfont.woff2") format("woff2"),
+    url("./assets/pet-fonts/futura_round_demi-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
-
 @font-face {
-  font-family: 'futura_round';
-  src: url('./assets/pet-fonts/futura_round-webfont.woff2') format('woff2'),
-    url('./assets/pet-fonts/futura_round-webfont.woff') format('woff');
+  font-family: "futura_round";
+  src: url("./assets/pet-fonts/futura_round-webfont.woff2") format("woff2"),
+    url("./assets/pet-fonts/futura_round-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
 html {
@@ -85,9 +81,10 @@ a {
     rgb(255, 255, 255) 30% 65%,
     rgba(255, 209, 1, 0.2)
   ); */
-  background-image: url(./assets/home/left-backgroud.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(./assets//backgrounds/global-left-background.svg), url(./assets/backgrounds/global-right-backgroud.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: left ,right;
+  background-position-y: top, bottom;
 }
 
 .title {
@@ -121,7 +118,7 @@ a {
   border-radius: 10px !important;
   font-size: 2.8rem !important;
   font-weight: 700 !important;
-  border: 2px solid #3C1DA9 !important;
+  border: 2px solid #3c1da9 !important;
 }
 
 .customized-input {
@@ -139,4 +136,8 @@ a {
 
 .display-box-shadow {
   box-shadow: 4px 6px 10px 1px rgba(128, 128, 128, 0.2);
+}
+
+.color-bg {
+  background-color: white;
 }

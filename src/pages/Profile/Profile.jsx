@@ -17,7 +17,7 @@ const Profile = ({ user }) => {
   return (
     <>
       <Navbar />
-      <div className="profile">
+      <div className="profile background-gc">
         <h2 className="name">{user.name}</h2>
         <img alt="" src={profileImage} className="profile-img" />
         <div className="profile-section">

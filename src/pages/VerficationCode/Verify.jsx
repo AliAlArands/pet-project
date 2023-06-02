@@ -5,8 +5,8 @@ const Verify = () => {
   return (
     <>
       <Back/>
-      <div className="background-gc contain">
-        <form className="form text-center verify-form" action="" method="POST">
+      <div className="background-gc contain-verify contain">
+        <form className="form text-center verify-form color-bg" action="" method="POST">
           <div className="title verify-title">Enter Verification Code</div>
           <div className="mb-4">
             <input type="text" maxlength="4" class="mb-3 customized-input input-verify-field" />

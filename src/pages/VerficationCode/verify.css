@@ -24,3 +24,8 @@
   width: 39% !important;
   margin-top: 0 !important;
 }
+
+.contain-verify {
+  background-position-y: 60px, 120% !important;
+  background-position-x: -8%, right !important;
+}
