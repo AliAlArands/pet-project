@@ -5,6 +5,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { BsStarFill } from "react-icons/bs";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 const ProductComponent = () => {
   const location = useLocation();
@@ -24,6 +25,7 @@ const ProductComponent = () => {
   };
   return (
     <>
+    <Navbar/>
       <div className="product-container-page ">
         <div className="back-to-list">
           <FaArrowLeft className="back-to-list-icon" />

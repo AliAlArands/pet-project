@@ -85,7 +85,7 @@ a {
     rgb(255, 255, 255) 30% 65%,
     rgba(255, 209, 1, 0.2)
   ); */
-  background-image: url(./assets/home/background.svg);
+  background-image: url(./assets/home/left-backgroud.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -1,8 +1,10 @@
+import Navbar from "../../components/Navbar/Navbar";
 import "./feedback.css";
 
 const Feedback = () => {
   return (
     <>
+    <Navbar/>
       <div className="feedback background-gc">
         <p className="text-center title large-title feedback-title">
           Give us feedback!
