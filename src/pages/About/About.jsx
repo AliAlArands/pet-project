@@ -1,17 +1,21 @@
 import React from "react";
 import "./about.css";
+import Navbar from "../../components/Navbar/Navbar";
 const About = () => {
   return (
-    <div className="contain background-gc about-container">
-      <h1 className="title large-title">About us</h1>
-      <div className="about-text">
-        Our store specializes in providing pet owners with high-quality products
-        and services. We have a wide range of pet-related products and supplies,
-        which you can browse and purchase at competitive prices, with direct
-        shipping to your doorstep anywhere. We strive to make caring for your
-        pets safer, easier, and more enjoyable.
+    <>
+      <Navbar />
+      <div className="contain background-gc about-container">
+        <h1 className="title large-title">About us</h1>
+        <div className="about-text">
+          Our store specializes in providing pet owners with high-quality products
+          and services. We have a wide range of pet-related products and supplies,
+          which you can browse and purchase at competitive prices, with direct
+          shipping to your doorstep anywhere. We strive to make caring for your
+          pets safer, easier, and more enjoyable.
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
