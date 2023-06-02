@@ -56,37 +56,42 @@
 }
 
 .icon {
-  /* cursor: pointer; */
+  cursor: pointer;
   transition: all 0.3s linear;
   color: white;
 }
 
-/* .chevron-down {
+.chevron-down {
   transform: rotate(180deg);
-} */
+}
 
 #profile-list-group {
   /* display: none !important; */
   /* opacity: 0; */
   transition: all 0.3s linear;
   margin-bottom: 150px !important;
+  position: relative;
+  display: none;
+  /* transition: all 0.3s linear; */
 }
 
 .setting-list .list-group-item {
   margin-bottom: 3px;
   opacity: 67% !important;
+  /* position: relative; */
+  /* width: 100%; */
 }
 .setting-list .list-group-item .btn {
   font-weight: 700 !important;
   font-size: 1.5rem;
   color: gray !important;
   transition: all 0.5s linear;
+  /* width: 100%; */
 }
 
 .setting-list .list-group-item .btn:hover {
   color: black !important;
 }
-/* .show-setting-list  {
-  animation: show-list 0.5s forwards;
+.show-setting-list  {
   display: block !important;
-} */
+}

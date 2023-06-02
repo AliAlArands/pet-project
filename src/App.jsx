@@ -31,6 +31,15 @@ const product = {
   price: "20$",
 };
 
+const user = {
+  name: "Sara Ahmad",
+  birthDay: "15/8/1999",
+  pet: {  
+    type: "Cat",
+  },
+  // isAuthenticated : true,
+};
+
 function App() {
   return (
     <div>

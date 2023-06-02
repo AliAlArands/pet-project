@@ -4,32 +4,29 @@ import { FaChevronDown } from "react-icons/fa";
 // import { FaShoppingCart } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import profileImage from "./../../assets/profile/profile-Image.svg";
-// const handleOnClick = () => {
-//   const chevron = document.querySelector("#chevron");
-//   // console.log(chevron);
-//   const list = document.querySelector(".setting-list");
-//   list.classList.toggle("show-setting-list");
-//   chevron.classList.toggle("chevron-down");
-// };
+const handleOnClick = () => {
+  const chevron = document.querySelector("#chevron");
+  // console.log(chevron);
+  const list = document.querySelector("#profile-list-group");
+  console.log(list);
+  list.classList.toggle("show-setting-list");
+  chevron.classList.toggle("chevron-down");
+};
 
 const Profile = ({ user }) => {
   return (
     <>
       <Navbar />
       <div className="profile">
-
-          <h2 className="name">{user.name}</h2>
-          <img
-            alt=""
-            src={profileImage}
-            className="profile-img"
-          />
+        <h2 className="name">{user.name}</h2>
+        <img alt="" src={profileImage} className="profile-img" />
         <div className="profile-section">
           <div className="info">
             <div className="setting">
-              <IoMdSettings className="fs-3 icon"/> <span className="setting-label">Setting</span>
-              <FaChevronDown 
-                // onClick={handleOnClick}
+              <IoMdSettings className="fs-3 icon" />{" "}
+              <span className="setting-label">Setting</span>
+              <FaChevronDown
+                onClick={handleOnClick}
                 id="chevron"
                 className="fs-3 icon"
               />
