@@ -38,6 +38,7 @@ function App() {
       {/* <ProductComponent product={product}/> */}
       {/* <Checkout/> */}
       {/* <SignUp/> */}
+      {/* <Hero/> */}
     </div>
   );
 }
