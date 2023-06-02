@@ -135,7 +135,7 @@ const AppWrapper = () => {
       children: [
         {
           path: "/",
-          element: <Home products={products} />,
+          element: <Home products={products} setProducts={setProducts} />,
         },
         {
           path: "/cart",

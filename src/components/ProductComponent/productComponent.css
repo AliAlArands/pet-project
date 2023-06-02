@@ -3,7 +3,11 @@
   padding-left: 95px;
   padding-bottom: 210px;
   /* background-color: gray !important; */
+  background-position-y: 135px, 120% !important;
+  background-position-x: -8%, right !important;
+
 }
+
 .back-to-list {
   padding: 50px 0 !important;
   display: flex;
@@ -19,6 +23,7 @@
   /* text-decoration: underline !important; */
   border-bottom: 4px solid rgba(32, 110, 246, 1) !important;
 }
+
 .back-to-list-icon {
   border-bottom: none !important;
   margin-right: 5px;
@@ -66,6 +71,7 @@
   justify-content: flex-start;
   margin-bottom: 36px;
 }
+
 .product-category-and-stars span {
   margin-right: 12px;
 }
@@ -113,10 +119,10 @@
 }
 
 .btn-add-to-card-product-page {
-    background-color: rgba(38, 207, 124, 1) !important;
-    color: white !important;
-    border-radius: 1rem !important;
-    padding: 12.5px 153.5px !important;
-    border: 0 !important;
+  background-color: rgba(38, 207, 124, 1) !important;
+  color: white !important;
+  border-radius: 1rem !important;
+  padding: 12.5px 153.5px !important;
+  border: 0 !important;
 
 }

@@ -25,8 +25,7 @@ const ProductComponent = () => {
   };
   return (
     <>
-    <Navbar/>
-      <div className="product-container-page ">
+      <div className="product-container-page background-gc">
         <div className="back-to-list">
           <FaArrowLeft className="back-to-list-icon" />
           <a href="" className="back-to-list-link">

@@ -133,6 +133,9 @@
   color: rgba(32, 110, 246, 1) !important;
 }
 
+.selected-category{
+  color:#1A58C5;
+}
 .products-carousel {
   /* padding: 0 7.5rem; */
   margin-bottom: 70px !important;
@@ -177,4 +180,11 @@
 
 .link-social-register {
   background-color: white;
+}
+
+.home-page-products-display {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: repeat(2, 500px); */
+  width: 100%;
 }
