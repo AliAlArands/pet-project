@@ -11,7 +11,9 @@ import "./signup.css";
 import Navbar from "../../components/Navbar/Navbar";
 import axios from "axios";
 import petStore from "../../apis/petStore";
+import { useNavigate } from "react-router-dom";
 const SignUp = () => {
+  const navigate = useNavigate()
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const confirmPasswordRef = useRef(null);
@@ -19,9 +21,9 @@ const SignUp = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
-      email: emailRef,
-      password: passwordRef,
-      confirmPassword: confirmPasswordRef
+      email: emailRef.current.value,
+      password: passwordRef.current.value,
+      confirmPassword: confirmPasswordRef.current.value
     };
 
     petStore.post("/register/", formData)
@@ -31,6 +33,8 @@ const SignUp = () => {
       .catch(error => {
         console.log("failed to register:", error);
       })
+
+    navigate("/");
   }
   return (
     <>
