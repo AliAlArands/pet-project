@@ -24,7 +24,7 @@ const SignUp = () => {
       confirmPassword: confirmPasswordRef
     };
 
-    petStore.post("/regiter/", formData)
+    petStore.post("/register/", formData)
       .then(response => {
         console.log("log in response data:", response.data);
       })
