@@ -3,7 +3,6 @@
   background-color: rgba(248, 248, 248, 1);
   box-shadow: 0px 0 10px 1px #a7a3a3 !important;
   /* box-shadow: 4px 6px 10px 1px rgba(128, 128, 128, 0.2) !important; */
-
 }
 
 .logo {
@@ -43,6 +42,11 @@
   width: 9%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-icon {
+  cursor: pointer;
 }
 
 .icons .icon {

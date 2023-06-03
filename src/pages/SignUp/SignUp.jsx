@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Form from "react-bootstrap/Form";
 import { Button } from "react-bootstrap";
 import { FaFacebook, FaGoogle, FaUser, FaLock } from "react-icons/fa";
@@ -9,7 +9,29 @@ import register from "./../../assets/home/Register.svg";
 // import { BiUserCheck } from "react-icons/bi";
 import "./signup.css";
 import Navbar from "../../components/Navbar/Navbar";
+import axios from "axios";
+import petStore from "../../apis/petStore";
 const SignUp = () => {
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+  const confirmPasswordRef = useRef(null);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = {
+      email: emailRef,
+      password: passwordRef,
+      confirmPassword: confirmPasswordRef
+    };
+
+    petStore.post("/regiter/", formData)
+      .then(response => {
+        console.log("log in response data:", response.data);
+      })
+      .catch(error => {
+        console.log("failed to register:", error);
+      })
+  }
   return (
     <>
       <Navbar />
@@ -38,7 +60,7 @@ const SignUp = () => {
               <div className="line-between"></div>
             </div>
             <div className="d-flex justify-content-between algin-items-center">
-              <Form className="sign-up-form">
+              <Form className="sign-up-form" onSubmit={() => handleSubmit(event)}>
                 <Form.Group className="sign-up-form-group" controlId="formBasicEmail">
                   <Form.Label className="label-bold">
                     Email address or username
@@ -46,6 +68,7 @@ const SignUp = () => {
                   <div className="input-container">
                     <FaUser className="input-signup-icon" />
                     <Form.Control
+                      ref={emailRef}
                       type="email"
                       className="specified-input user-input"
                       placeholder="Type name"
@@ -57,6 +80,7 @@ const SignUp = () => {
                   <div className="input-container">
                     <FaLock className="input-signup-icon" />
                     <Form.Control
+                      ref={passwordRef}
                       type="password"
                       className="specified-input"
                       placeholder="*******************"
@@ -68,6 +92,7 @@ const SignUp = () => {
                   <div className="input-container">
                     <FaLock className="input-signup-icon" />
                     <Form.Control
+                      ref={confirmPasswordRef}
                       type="password"
                       className="specified-input"
                       placeholder="*******************"

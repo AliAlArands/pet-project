@@ -5,19 +5,10 @@ import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 import { AiOutlineCheck } from "react-icons/ai";
 import Navbar from "../../components/Navbar/Navbar";
 import { getCartItems } from "../../apis/cartApi";
-const Cart = () => {
+const Cart = ({ products }) => {
 
   const [cartItems, setCartItems] = useState([]);
-  useEffect(() => {
-    const getItems = () => {
-
-      const responseCartItems = getCartItems();
-      if (!responseCartItems) return
-      setCartItems(responseCartItems)
-      console.log(cartItems);
-    }
-  })
-  const deteteCartItem = (id) => {
+  const deleteCartItem = (id) => {
     const new_cart_items = cartItems.filter((cartItem) => cartItem.id !== id);
     setCartItems(new_cart_items);
   };
@@ -41,6 +32,18 @@ const Cart = () => {
     }
   };
 
+  // here I fetch the cartItems from the backend
+  useEffect(() => {
+    const fetchCartItems = async () => {
+
+      let cartItemsList = await getCartItems;
+      setCartItems(cartItemsList);
+
+    }
+
+    fetchCartItems()
+    console.log(cartItems)
+  }, [])
   return (
     <>
       <Navbar />
@@ -51,7 +54,7 @@ const Cart = () => {
             <div className="d-flex justify-content-between algin-items-center cart-items-chevrons-container">
               <div ref={cartContainer} className="cart-items">
                 <div>
-                  {cartItems.map((cartItem) => {
+                  {products.map((cartItem) => {
                     // console.log(cartItem.title);
                     return (
                       <div

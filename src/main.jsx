@@ -134,7 +134,7 @@ const AppWrapper = () => {
         },
         {
           path: "/cart/:id",
-          element: <Cart/>,
+          element: <Cart products={products}/>,
         },
         {
           path: "/find-my-pet",
