@@ -9,9 +9,13 @@ const Cart = () => {
 
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
-    const responseCartItems = getCartItems();
-    setCartItems(responseCartItems)
-    console.log(cartItems);
+    const getItems = () => {
+
+      const responseCartItems = getCartItems();
+      if (!responseCartItems) return
+      setCartItems(responseCartItems)
+      console.log(cartItems);
+    }
   })
   const deteteCartItem = (id) => {
     const new_cart_items = cartItems.filter((cartItem) => cartItem.id !== id);
