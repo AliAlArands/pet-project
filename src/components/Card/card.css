@@ -27,6 +27,7 @@ img {
 }
 .product-name {
   font-size: 2.4rem;
+  cursor: pointer;
 }
 .product-price {
   font-size: 1.5rem;

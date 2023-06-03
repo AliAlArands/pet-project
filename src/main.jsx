@@ -35,7 +35,7 @@ const AppWrapper = () => {
   const [products, setProducts] = useState([
     {
       id: 1,
-      title: "Product A",
+      title: "Product 1",
       count: 1,
       price: 19.99,
       stars: 4,
@@ -44,7 +44,7 @@ const AppWrapper = () => {
     },
     {
       id: 2,
-      title: "Product B",
+      title: "Product 2",
       count: 1,
       price: 12.49,
       stars: 3,
@@ -53,7 +53,7 @@ const AppWrapper = () => {
     },
     {
       id: 3,
-      title: "Product C",
+      title: "Product 3",
       count: 1,
       price: 59.99,
       stars: 5,
@@ -62,7 +62,7 @@ const AppWrapper = () => {
     },
     {
       id: 4,
-      title: "Product D",
+      title: "Product 4",
       count: 1,
       price: 32.99,
       stars: 4,
@@ -71,7 +71,7 @@ const AppWrapper = () => {
     },
     {
       id: 5,
-      title: "Product E",
+      title: "Product 5",
       count: 1,
       price: 8.99,
       stars: 2,
@@ -80,7 +80,7 @@ const AppWrapper = () => {
     },
     {
       id: 6,
-      title: "Product F",
+      title: "Product 6",
       count: 1,
       price: 45.99,
       stars: 4,
@@ -89,7 +89,7 @@ const AppWrapper = () => {
     },
     {
       id: 7,
-      title: "Product G",
+      title: "Product 7",
       count: 1,
       price: 27.99,
       stars: 3,
@@ -97,7 +97,7 @@ const AppWrapper = () => {
     },
     {
       id: 8,
-      title: "Product H",
+      title: "Product 8",
       count: 1,
       price: 64.99,
       stars: 5,
@@ -106,7 +106,7 @@ const AppWrapper = () => {
     },
     {
       id: 9,
-      title: "Product I",
+      title: "Product 9",
       count: 1,
       price: 14.99,
       stars: 3,
@@ -114,7 +114,7 @@ const AppWrapper = () => {
     },
     {
       id: 10,
-      title: "Product J",
+      title: "Product 10",
       count: 1,
       price: 39.99,
       stars: 4,
@@ -138,7 +138,7 @@ const AppWrapper = () => {
           element: <Home products={products} setProducts={setProducts} />,
         },
         {
-          path: "/cart",
+          path: "/cart/:id",
           element: <Cart products={products} deleteCartItem={deteteCartItem} />,
         },
         {

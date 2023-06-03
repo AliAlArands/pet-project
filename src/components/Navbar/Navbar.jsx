@@ -7,8 +7,18 @@ import cart from "./../../assets/navbar/cart.svg";
 import { FiUser } from "react-icons/fi";
 import { BsCart2 } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import createCart from "../../apis/createCart";
+import { useNavigate } from "react-router-dom";
+
 
 const Navbar = () => {
+  // const navigate = useNavigate();
+  let cartId = createCart()
+  // const navigateToCart = () => {
+  //   cartId = createCart();
+  //   navigate(`/carts/${cartId}/`);
+
+  // }
   return (
     <div className="d-flex justify-content-between align-items-center pet-store-navbar">
       <div className="">
@@ -29,7 +39,7 @@ const Navbar = () => {
       <div className="icons">
         {/* <img src={cart} alt="" />
         <img src={user} alt="" /> */}
-        <Link to="/cart">
+        <Link to={`/cart/${cartId}`}>
           <BsCart2 />
         </Link>
         <Link to="/profile">

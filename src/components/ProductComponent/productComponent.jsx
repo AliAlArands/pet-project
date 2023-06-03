@@ -25,6 +25,7 @@ const ProductComponent = () => {
   };
   return (
     <>
+      <Navbar/>
       <div className="product-container-page background-gc">
         <div className="back-to-list">
           <FaArrowLeft className="back-to-list-icon" />
@@ -38,7 +39,7 @@ const ProductComponent = () => {
             <img src={dogFood} alt="" className="product-page-image" />
           </div>
           <div className="product-second-section">
-            <h1 className="product-title">{dataObject.title}</h1>
+            <h1 className="product-title">{dataObject.name}</h1>
             <div className="product-category-and-stars">
               <span className="product-category">CAT FOOD</span>
               <span className="product-stars">
@@ -64,7 +65,7 @@ const ProductComponent = () => {
                   <AiOutlinePlusSquare onClick={addOne} />
                 </span>
               </div>
-              <div className="product-page-price">{dataObject.price}</div>
+              <div className="product-page-price">{dataObject.price}$</div>
             </div>
             <div className="d-flex justify-content-center algin-items-center">
               <button className="btn btn-add-to-card-product-page">

@@ -13,41 +13,63 @@ import { useEffect, useState } from "react";
 import petStore from "../../apis/petStore";
 import Card from "../../components/Card/Card";
 import ProductComponent from "../../components/ProductComponent/productComponent";
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi"
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 const Home = ({ products, setProducts }) => {
   // counting how many peages I need to display on the screen
-  const pagesCount = products.length / 8;
-  console.log(pagesCount)
-  const pages = Array(products.pagesCount).fill(1);
-
+  const pagesCount = Math.ceil(products.length / 8);
+  // console.log(pagesCount);
+  const pages = Array(pagesCount).fill(1);
+  // console.log(pages);
+  const productsLength = products.length;
   const [category, setCategory] = useState("");
   const [apiProducts, setApiProducts] = useState([]);
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(8);
 
+  const handleOnClicktoLeft = () => {
+    if (start === 0) return;
+    // console.log("i am here")
+    setStart(start - 8);
+    setEnd(start);
+  };
+
+  const handleOnClicktoRight = () => {
+    if (end + 8 > productsLength) {
+      setEnd(productsLength);
+      setStart(end);
+      console.log(start);
+    } else {
+      setEnd(end + 8);
+      setStart(start + 8);
+    }
+  };
 
   const styleSelectedCategory = () => {
-    const categories = document.querySelectorAll('.category-btn');
-    categories.forEach((category) => {
-      category.addEventListener(('click'), () => {
-        let categroyValue = category.innerText;
+    const categories = document.querySelectorAll(".category-btn");
+    categories.forEach((categoryName) => {
+      categoryName.addEventListener("click", () => {
+        let categroyValue = categoryName.innerText;
         setCategory(categroyValue);
-        categories.forEach((category) => {
-          category.classList.remove('selected-category')
+        // console.log(category);
+        categories.forEach((categoryName) => {
+          categoryName.classList.remove("selected-category");
         });
-        category.classList.add('selected-category');
+        categoryName.classList.add("selected-category");
 
         // cards.forEach((product) => displayProducts(product, categroyValue));
-      })
-    })
-
-  }
+      });
+    });
+  };
 
   const filterProducts = () => {
+    console.log(category);
     if (category === "") return;
-    const newProductList = products.filter((product) => product.category !== category);
-    setProducts(newProductList);
-  }
+    const newProductList = products.filter(
+      (product) => product.title !== category
+    );
+    console.log(newProductList);
+    // setProducts(newProductList);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -125,29 +147,38 @@ const Home = ({ products, setProducts }) => {
           </div>
         </div>
       </section>
+      <div className="categories">
+        <button className="category-btn" onClick={() => {styleSelectedCategory; filterProducts}}>
+          GPS tracker
+        </button>
+        <button className="category-btn" onClick={() => {styleSelectedCategory; filterProducts}}>
+          Dry food
+        </button>
+        <button className="category-btn" onClick={() => {styleSelectedCategory; filterProducts}}>
+          Shampoo
+        </button>
+        <button className="category-btn" onClick={() => {styleSelectedCategory; filterProducts}}>
+          Dishes
+        </button>
+      </div>
       <section className="products" id="products">
-        <div className="categories">
-          <button className="category-btn" onClick={styleSelectedCategory}>GPS tracker</button>
-          <button className="category-btn" onClick={styleSelectedCategory}>Dry food</button>
-          <button className="category-btn" onClick={styleSelectedCategory}>Shampoo</button>
-          <button className="category-btn" onClick={styleSelectedCategory}>Dishes</button>
-        </div>
-        <div className='home-page-products-display'>
+        <div className="home-page-products-display">
           {products.slice(start, end).map((product) => {
-            filterProducts();
-            return (
-              <Card product={product} key={product.id} />
-            );
+            return <Card product={product} key={product.id} />;
           })}
         </div>
-        <div className="products-page">
-          <BiChevronLeft/>
-          {pages.map((page, index) => (
-
-            <button key={index}>{index + 1}</button>
-
-          ))}
-          <BiChevronRight/>
+        <div className="product-pages">
+          <BiChevronLeft
+            onClick={handleOnClicktoLeft}
+            className="product-pages-icon"
+          />
+          {pages.map((page, index) => {
+            return <span key={index}>{index + 1}</span>;
+          })}
+          <BiChevronRight
+            onClick={handleOnClicktoRight}
+            className="product-pages-icon"
+          />
         </div>
         {/* <div className="products-carousel">
           <Carousel items={products} />
@@ -155,7 +186,7 @@ const Home = ({ products, setProducts }) => {
         <div className="products-carousel-two">
           <Carousel items={products} />
         </div> */}
-      </section >
+      </section>
 
       <section className="privilages">
         <div className="privilage">
@@ -189,7 +220,7 @@ const Home = ({ products, setProducts }) => {
       </section>
 
       <FooterComponent />
-    </div >
+    </div>
   );
 };
 export default Home;

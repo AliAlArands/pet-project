@@ -6,16 +6,46 @@ import {
   AiOutlineMinusCircle,
 } from "react-icons/ai";
 import "./small.css";
+import petStore from "../../apis/petStore";
 const SmallCard = ({ product, deleteCartItem }) => {
   //   console.log(product);
+  let cartId = localStorage.getItem("cartId");
   const [count, setCount] = useState(1);
 
   const removeOne = () => {
     if (count === 1) {
-      deleteCartItem(product.id);
+      petStore
+        .delete(`carts/${cartId}`, {
+          data: {
+            product_id: product.id,
+          },
+        })
+        .then(() => {
+          deleteCartItem(product.id);
+          console.log("Delete request successful:", response.data);
+        })
+        .catch((err) => {
+          console.error("Error sending PUT request:", err);
+        });
     }
     const newCount = count - 1;
     setCount(newCount);
+  };
+
+  const addOne = () => {
+    petStore
+      .put(`carts/${cartId}`, {
+        data: {
+          product_id: product.id,
+          quantity: count + 1,
+        },
+      })
+      .then((response) => {
+        console.log("PUT request successful:", response.data);
+      })
+      .catch((error) => {
+        console.error("Error sending PUT request:", error);
+      });
   };
   return (
     <div className="d-flex justify-content-between align-items-center small-card">

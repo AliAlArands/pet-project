@@ -74,13 +74,14 @@ a {
 
 .background-gc {
   /* background: rgba(248, 248, 248, 1);
-
+  
   background: linear-gradient(
     45deg,
     rgba(32, 110, 246, 0.2) 0%,
     rgb(255, 255, 255) 30% 65%,
     rgba(255, 209, 1, 0.2)
   ); */
+  background-color: #F8F8F8;
   background-image: url(./assets//backgrounds/global-left-background.svg), url(./assets/backgrounds/global-right-backgroud.svg);
   background-repeat: no-repeat, no-repeat;
   background-position-x: left ,right;
