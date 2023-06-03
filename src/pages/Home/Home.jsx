@@ -16,11 +16,10 @@ import ProductComponent from "../../components/ProductComponent/productComponent
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 const Home = ({ products, setProducts }) => {
   // counting how many peages I need to display on the screen
-  const pagesCount = Math.ceil(products.length / 8);
-  // console.log(pagesCount);
-  const pages = Array(pagesCount).fill(1);
-  // console.log(pages);
-  const productsLength = products.length;
+  let pagesCount = 0;
+  let pages = [];
+  let productsLength;
+
   const [category, setCategory] = useState("");
   const [apiProducts, setApiProducts] = useState([]);
   const [start, setStart] = useState(0);
@@ -82,6 +81,9 @@ const Home = ({ products, setProducts }) => {
       }
     };
     fetchData();
+    pagesCount = Math.ceil(apiProducts.length / 8);
+    pages = Array(pagesCount).fill(1);
+    productsLength = apiProducts.length;
   }, []);
   return (
     <div className="home">
@@ -148,16 +150,16 @@ const Home = ({ products, setProducts }) => {
         </div>
       </section>
       <div className="categories">
-        <button className="category-btn" onClick={() => {styleSelectedCategory; filterProducts}}>
+        <button className="category-btn" onClick={() => { styleSelectedCategory; filterProducts }}>
           GPS tracker
         </button>
-        <button className="category-btn" onClick={() => {styleSelectedCategory; filterProducts}}>
+        <button className="category-btn" onClick={() => { styleSelectedCategory; filterProducts }}>
           Dry food
         </button>
-        <button className="category-btn" onClick={() => {styleSelectedCategory; filterProducts}}>
+        <button className="category-btn" onClick={() => { styleSelectedCategory; filterProducts }}>
           Shampoo
         </button>
-        <button className="category-btn" onClick={() => {styleSelectedCategory; filterProducts}}>
+        <button className="category-btn" onClick={() => { styleSelectedCategory; filterProducts }}>
           Dishes
         </button>
       </div>

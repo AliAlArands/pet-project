@@ -5,16 +5,17 @@ import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 import { AiOutlineCheck } from "react-icons/ai";
 import Navbar from "../../components/Navbar/Navbar";
 import { getCartItems } from "../../apis/cartApi";
-
 const Cart = () => {
 
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
-    getCartItems
+    const responseCartItems = getCartItems();
+    setCartItems(responseCartItems)
+    console.log(cartItems);
   })
   const deteteCartItem = (id) => {
-    const new_products_list = products.filter((product) => product.id !== id);
-    setProducts(new_products_list);
+    const new_cart_items = cartItems.filter((cartItem) => cartItem.id !== id);
+    setCartItems(new_cart_items);
   };
   const cartContainer = useRef(null);
   // console.log(products);
@@ -46,16 +47,16 @@ const Cart = () => {
             <div className="d-flex justify-content-between algin-items-center cart-items-chevrons-container">
               <div ref={cartContainer} className="cart-items">
                 <div>
-                  {products.map((product) => {
-                    // console.log(product.title);
+                  {cartItems.map((cartItem) => {
+                    // console.log(cartItem.title);
                     return (
                       <div
                         className="d-flex justify-content-around align-items-center"
-                        key={product.id}
+                        key={cartItem.id}
                       >
                         {/* <AiOutlineCheck className="check-icon" /> */}
                         <SmallCard
-                          product={product}
+                          cartItem={cartItem}
                           deleteCartItem={deleteCartItem}
                         />
                       </div>

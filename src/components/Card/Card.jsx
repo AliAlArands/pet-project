@@ -4,7 +4,7 @@ import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import image from "./../../assets/image.jpg";
 import petStore from "../../apis/petStore";
 import { useNavigate } from "react-router-dom";
-import createCart from "../../apis/cartApi";
+import { createCart } from "../../apis/cartApi";
 const Card = ({ product }) => {
   const navigate = useNavigate();
   const stars = Array(product.stars).fill(1); // Create an array with the specified count

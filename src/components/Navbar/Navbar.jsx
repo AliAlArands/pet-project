@@ -7,9 +7,10 @@ import cart from "./../../assets/navbar/cart.svg";
 import { FiUser } from "react-icons/fi";
 import { BsCart2 } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import createCart from "../../apis/cartApi";
+// import createCart from "../../apis/cartApi";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { createCart } from "../../apis/cartApi";
 
 const Navbar = () => {
   // const navigate = useNavigate();
