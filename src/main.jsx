@@ -123,11 +123,6 @@ const AppWrapper = () => {
     },
   ]);
 
-  const deteteCartItem = (id) => {
-    const new_products_list = products.filter((product) => product.id !== id);
-    setProducts(new_products_list);
-  };
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -139,7 +134,7 @@ const AppWrapper = () => {
         },
         {
           path: "/cart/:id",
-          element: <Cart products={products} deleteCartItem={deteteCartItem} />,
+          element: <Cart/>,
         },
         {
           path: "/find-my-pet",

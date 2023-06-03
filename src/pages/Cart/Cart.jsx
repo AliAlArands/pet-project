@@ -1,10 +1,21 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./cart.css";
 import SmallCard from "../../components/SmallCard/SmallCard";
 import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 import { AiOutlineCheck } from "react-icons/ai";
 import Navbar from "../../components/Navbar/Navbar";
-const Cart = ({ products, deleteCartItem }) => {
+import { getCartItems } from "../../apis/cartApi";
+
+const Cart = () => {
+
+  const [cartItems, setCartItems] = useState([]);
+  useEffect(() => {
+    getCartItems
+  })
+  const deteteCartItem = (id) => {
+    const new_products_list = products.filter((product) => product.id !== id);
+    setProducts(new_products_list);
+  };
   const cartContainer = useRef(null);
   // console.log(products);
   const handleScrollUp = () => {

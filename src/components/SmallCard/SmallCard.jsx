@@ -28,8 +28,10 @@ const SmallCard = ({ product, deleteCartItem }) => {
           console.error("Error sending PUT request:", err);
         });
     }
-    const newCount = count - 1;
-    setCount(newCount);
+    else {
+      
+    }
+    setCount(count - 1);
   };
 
   const addOne = () => {
@@ -42,6 +44,7 @@ const SmallCard = ({ product, deleteCartItem }) => {
       })
       .then((response) => {
         console.log("PUT request successful:", response.data);
+        setCount(count + 1)
       })
       .catch((error) => {
         console.error("Error sending PUT request:", error);
@@ -63,7 +66,7 @@ const SmallCard = ({ product, deleteCartItem }) => {
             />{" "}
             <span className="me-3">{count}</span>{" "}
             <AiOutlinePlusCircle
-              onClick={() => setCount(count + 1)}
+              onClick={() => addOne}
               className="small-card-icon"
             />{" "}
             <AiFillDelete

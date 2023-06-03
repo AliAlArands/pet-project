@@ -163,7 +163,7 @@ const Home = ({ products, setProducts }) => {
       </div>
       <section className="products" id="products">
         <div className="home-page-products-display">
-          {products.slice(start, end).map((product) => {
+          {apiProducts.slice(start, end).map((product) => {
             return <Card product={product} key={product.id} />;
           })}
         </div>

@@ -4,14 +4,13 @@ import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import image from "./../../assets/image.jpg";
 import petStore from "../../apis/petStore";
 import { useNavigate } from "react-router-dom";
-import createCart from "../../apis/createCart";
+import createCart from "../../apis/cartApi";
 const Card = ({ product }) => {
   const navigate = useNavigate();
   const stars = Array(product.stars).fill(1); // Create an array with the specified count
 
   // when a customer clicks on add to cart it should create a cart and update it.
   const createCartOrUpdate = (productId) => {
-
     const cartId = createCart();
 
     petStore
@@ -26,16 +25,21 @@ const Card = ({ product }) => {
 
   const showProduct = () => {
     const queryParam = encodeURIComponent(JSON.stringify(product));
-    navigate(`/products/${product.id}?data=${queryParam}`)
-  }
+    navigate(`/products/${product.id}?data=${queryParam}`);
+  };
   return (
     <>
-      <div className="card" >
+      <div className="card">
         <img src={image} />
 
         <div className="pt-3">
-          <div className="product-name-stars" onClick={() => showProduct(product.id)}>
-            <span className="product-name" onClick={showProduct}>{product.name}</span>
+          <div
+            className="product-name-stars"
+            onClick={() => showProduct(product.id)}
+          >
+            <span className="product-name" onClick={showProduct}>
+              {product.name}
+            </span>
             <span className="product-stars">
               {stars.map((star, index) => (
                 <BsStarFill key={index} />
