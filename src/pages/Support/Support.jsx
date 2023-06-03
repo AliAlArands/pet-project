@@ -7,7 +7,7 @@ function Support() {
     <div>
       <Navbar />
       <Navigation />
-      <div className="background-gc contain">
+      <div className="background-gc support-background contain">
         <div className="support">
           <h1 className="title large-title">Technical support</h1>
           <p className="support-description">

@@ -38,7 +38,7 @@ const Card = ({ product }) => {
             onClick={() => showProduct(product.id)}
           >
             <span className="product-name" onClick={showProduct}>
-              {product.name}
+              {product.title}
             </span>
             <span className="product-stars">
               {stars.map((star, index) => (

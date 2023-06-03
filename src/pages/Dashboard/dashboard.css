@@ -1,0 +1,80 @@
+.dashboard {
+    display: flex;
+}
+
+.barside {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.dashboard-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 44px 81px 84px 75px;
+}
+
+
+.dashboard-img {
+    width: 33px;
+    height: 33px;
+}
+
+.dashboard-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.options a,
+.logout {
+    color: #686767 !important;
+    transition: all 0.3s linear;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 72px !important;
+    width: 100%;
+    text-align: center;
+}
+
+.options a.active, .options a:hover {
+    color: black;
+    margin-left: 5px solid black;
+}
+
+.options a:hover {
+    color: black !important;
+}
+
+.logout {
+    margin-top: 260px;
+    margin-bottom: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-second-section {
+    width: 76%;
+}
+
+.dashboard-second-section .search-container {
+    margin: 34px 0px 34px 0px;
+}
+
+.dashboard-navbar {
+    display: flex;
+    justify-content: space-around;
+    /* box-shadow: 10px 0px 10px 1px rgba(128, 128, 128, 0.2); */
+
+}

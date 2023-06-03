@@ -2,6 +2,7 @@ import React from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { useRef, useState } from "react";
 import Card from "./../../components/Card/Card";
+import AdminCard from "./../../components/Card/AdminCard"
 import "./carousel.css"
 const Carousel = ({items}) => {
     const ItemsContainer = useRef(null);
@@ -57,7 +58,7 @@ const Carousel = ({items}) => {
         >
           <div className="items-list">
             {items.map((item) => {
-              return <Card product={item} key={item.id} />;
+              return <AdminCard product={item} key={item.id} />;
             })}
           </div>
         </div>

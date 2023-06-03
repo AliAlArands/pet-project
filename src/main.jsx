@@ -21,6 +21,8 @@ import About from "./pages/About/About.jsx";
 import ProductComponent from "./components/ProductComponent/productComponent.jsx";
 import SignUp from "./pages/SignUp/SignUp.jsx";
 import Checkout from "./pages/CheckOut/CheckOut.jsx";
+import Dashboard from "./pages/Dashboard/Dashboard.jsx";
+import DProducts from "./pages/dashboardPages/DashBoardProducts/DProducts.jsx";
 
 const user = {
   name: "Sara Ahmad",
@@ -187,6 +189,25 @@ const AppWrapper = () => {
         {
           path: "/checkout",
           element: <Checkout/>
+        },
+        {
+          path: "/dashboard",
+          element: <Dashboard/>,
+          children: [
+            {
+
+              path: "/dashboard",
+              element: <DProducts products={products}/>
+            },
+            {
+              path:"/dashboard-support"
+
+            },
+            {
+              path: "/dashboard-feedback"
+            }
+          ]
+
         }
       ],
     },

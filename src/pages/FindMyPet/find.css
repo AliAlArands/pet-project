@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-position-y: 100px,  bottom!important;
+  background-position-x: -8%, right !important;
+
 }
 
 .id-input {

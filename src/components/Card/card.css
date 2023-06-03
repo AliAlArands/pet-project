@@ -61,3 +61,18 @@ img {
   border-radius: 10px !important;
   border: rgba(60, 29, 169, 1) 2px solid !important;
 }
+
+.admin-icons {
+  font-size: 20px;
+  color: gray;
+}
+
+.admin-icon {
+  cursor: pointer;
+  transition: all 0.3s all;
+  margin-left: 6px;
+}
+
+.admin-icon:hover {
+  color: black;
+}

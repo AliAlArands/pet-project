@@ -1,3 +1,10 @@
+.support-background {
+  background-color: #F8F8F8;
+
+  background-position-y: 40px, 150% !important;
+  background-position-x: -45%, right !important;
+}
+
 .support {
   display: flex;
   align-items: center;
@@ -6,6 +13,7 @@
   width: 55%;
   margin: 0 auto;
 }
+
 .support-description {
   color: #6d7280;
   font-weight: 400;
@@ -13,6 +21,7 @@
   line-height: 30px;
   margin-bottom: 75px;
 }
+
 .support-input {
   width: 100%;
   border-radius: 20px;
@@ -22,4 +31,3 @@
   padding: 10px 20px;
   margin-bottom: 75px;
 }
-
