@@ -13,16 +13,26 @@ import { useEffect } from "react";
 import { createCart } from "../../apis/cartApi";
 
 const Navbar = () => {
-  // const navigate = useNavigate();
-  let cartId;
-  useEffect(() => {
-    cartId = createCart();
-  }, []);
-  // const navigateToCart = () => {
-  //   cartId = createCart();
-  //   navigate(`/carts/${cartId}/`);
+  const navigate = useNavigate();
 
-  // }
+  let cartId = localStorage.getItem("cartId");
+  const handleCartClick = async () => {
+
+    if (!cartId) {
+      try {
+        cartId = await createCart(); // Call the function to create a cart
+        localStorage.setItem("cartId", cartId);
+      } catch (error) {
+        console.error("Error creating cart:", error);
+        return;
+      }
+    }
+    console.log(cartId);
+    cartId = "2";
+    console.log(cartId);
+    const cartUrl = `/carts/${cartId}`;
+    navigate(cartUrl); // Programmatically navigate to the cart URL
+  };
   return (
     <div className="d-flex justify-content-between align-items-center pet-store-navbar">
       <div className="">
@@ -43,11 +53,13 @@ const Navbar = () => {
       <div className="icons">
         {/* <img src={cart} alt="" />
         <img src={user} alt="" /> */}
+
+        {/* <BsCart2 onClick={handleCartClick} className="navbar-icon" /> */}
         <Link to={`/cart/${cartId}`}>
           <BsCart2 />
         </Link>
         <Link to="/profile">
-          <FiUser />
+          <FiUser className="navbar-icon" />
         </Link>
       </div>
     </div>

@@ -1,22 +1,20 @@
 import petStore from "./petStore";
 
-let cartId = localStorage.getItem("cartId");
+let cartId;
 const createCart = async () => {
-  if (!cartId) {
-    await petStore
-      .post("/carts/")
-      .then((res) => {
-        console.log(res.data);
-        cartId = res.data.cart.id;
-        localStorage.setItem("cartId", cartId);
-      })
-      .catch((err) => console.log(err));
-  }
+  await petStore
+    .post("/carts/")
+    .then((res) => {
+      console.log("Request is okay:",res.data);
+      cartId = res.data.cart.id;
+      localStorage.setItem("cartId", cartId);
+    })
+    .catch((err) => console.log(err));
   return cartId;
 };
 
-let cartItems;
-const getCartItems = async () => {
+let cartItems = [];
+const getCartItems = async (cartId) => {
   await petStore.get(`/carts/${cartId}/`).then((res) => {
     cartItems = res.data;
   });
