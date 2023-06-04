@@ -38,7 +38,7 @@ const AppWrapper = () => {
   const [products, setProducts] = useState([
     {
       id: 1,
-      title: "Product 1",
+      title: "GPS Tracker",
       count: 1,
       price: 19.99,
       stars: 4,
@@ -47,7 +47,7 @@ const AppWrapper = () => {
     },
     {
       id: 2,
-      title: "Product 2",
+      title: "Dry Food",
       count: 1,
       price: 12.49,
       stars: 3,
@@ -56,7 +56,7 @@ const AppWrapper = () => {
     },
     {
       id: 3,
-      title: "Product 3",
+      title: "Shampoo",
       count: 1,
       price: 59.99,
       stars: 5,
@@ -65,7 +65,7 @@ const AppWrapper = () => {
     },
     {
       id: 4,
-      title: "Product 4",
+      title: "Dry Food",
       count: 1,
       price: 32.99,
       stars: 4,
@@ -74,7 +74,7 @@ const AppWrapper = () => {
     },
     {
       id: 5,
-      title: "Product 5",
+      title: "Dish",
       count: 1,
       price: 8.99,
       stars: 2,
@@ -83,7 +83,7 @@ const AppWrapper = () => {
     },
     {
       id: 6,
-      title: "Product 6",
+      title: "Dry Food",
       count: 1,
       price: 45.99,
       stars: 4,
@@ -92,7 +92,7 @@ const AppWrapper = () => {
     },
     {
       id: 7,
-      title: "Product 7",
+      title: "GPS",
       count: 1,
       price: 27.99,
       stars: 3,
@@ -100,7 +100,7 @@ const AppWrapper = () => {
     },
     {
       id: 8,
-      title: "Product 8",
+      title: "shampoo",
       count: 1,
       price: 64.99,
       stars: 5,
@@ -109,7 +109,7 @@ const AppWrapper = () => {
     },
     {
       id: 9,
-      title: "Product 9",
+      title: "dish",
       count: 1,
       price: 14.99,
       stars: 3,

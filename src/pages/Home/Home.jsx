@@ -49,7 +49,6 @@ const Home = ({ products, setProducts }) => {
       categoryName.addEventListener("click", () => {
         let categroyValue = categoryName.innerText;
         setCategory(categroyValue);
-        // console.log(category);
         categories.forEach((categoryName) => {
           categoryName.classList.remove("selected-category");
         });
@@ -64,10 +63,10 @@ const Home = ({ products, setProducts }) => {
     console.log(category);
     if (category === "") return;
     const newProductList = products.filter(
-      (product) => product.title !== category
+      (product) => product.title.toLowerCase() === category.toLowerCase()
     );
     console.log(newProductList);
-    // setProducts(newProductList);
+    setProducts(newProductList);
   };
 
   useEffect(() => {
@@ -111,7 +110,7 @@ const Home = ({ products, setProducts }) => {
         </div>
         <img src={heroImage} alt="dog and cat svg, pets svg" className="img" />
       </section>
-      <section className="main-product background-gc">
+      <section className="main-product">
         <h1 className="text-center title main-product-desc">
           Track your pet's adventures
           <br /> with our GPS tracker
@@ -150,22 +149,46 @@ const Home = ({ products, setProducts }) => {
         </div>
       </section>
       <div className="categories">
-        <button className="category-btn" onClick={() => { styleSelectedCategory; filterProducts }}>
+        <button
+          className="category-btn"
+          onClick={() => {
+            styleSelectedCategory();
+            filterProducts();
+          }}
+        >
           GPS tracker
         </button>
-        <button className="category-btn" onClick={() => { styleSelectedCategory; filterProducts }}>
+        <button
+          className="category-btn"
+          onClick={() => {
+            styleSelectedCategory();
+            filterProducts();
+          }}
+        >
           Dry food
         </button>
-        <button className="category-btn" onClick={() => { styleSelectedCategory; filterProducts }}>
+        <button
+          className="category-btn"
+          onClick={() => {
+            styleSelectedCategory();
+            filterProducts();
+          }}
+        >
           Shampoo
         </button>
-        <button className="category-btn" onClick={() => { styleSelectedCategory; filterProducts }}>
+        <button
+          className="category-btn"
+          onClick={() => {
+            styleSelectedCategory();
+            filterProducts();
+          }}
+        >
           Dishes
         </button>
       </div>
       <section className="products" id="products">
         <div className="home-page-products-display">
-          {apiProducts.slice(start, end).map((product) => {
+          {products.slice(start, end).map((product) => {
             return <Card product={product} key={product.id} />;
           })}
         </div>

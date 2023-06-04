@@ -9,11 +9,11 @@ import register from "./../../assets/home/Register.svg";
 // import { BiUserCheck } from "react-icons/bi";
 import "./signup.css";
 import Navbar from "../../components/Navbar/Navbar";
-import axios from "axios";
+import axios, { formToJSON } from "axios";
 import petStore from "../../apis/petStore";
 import { useNavigate } from "react-router-dom";
 const SignUp = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const confirmPasswordRef = useRef(null);
@@ -23,19 +23,20 @@ const SignUp = () => {
     const formData = {
       email: emailRef.current.value,
       password: passwordRef.current.value,
-      confirmPassword: confirmPasswordRef.current.value
+      confirmPassword: confirmPasswordRef.current.value,
     };
-
-    petStore.post("/register/", formData)
-      .then(response => {
+    console.log(JSON.stringify(formData));
+    petStore
+      .post("/register/",JSON.stringify(formData))
+      .then((response) => {
         console.log("log in response data:", response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log("failed to register:", error);
-      })
+      });
 
     navigate("/");
-  }
+  };
   return (
     <>
       <Navbar />
@@ -64,8 +65,14 @@ const SignUp = () => {
               <div className="line-between"></div>
             </div>
             <div className="d-flex justify-content-between algin-items-center">
-              <Form className="sign-up-form" onSubmit={() => handleSubmit(event)}>
-                <Form.Group className="sign-up-form-group" controlId="formBasicEmail">
+              <Form
+                className="sign-up-form"
+                onSubmit={() => handleSubmit(event)}
+              >
+                <Form.Group
+                  className="sign-up-form-group"
+                  controlId="formBasicEmail"
+                >
                   <Form.Label className="label-bold">
                     Email address or username
                   </Form.Label>
@@ -79,7 +86,9 @@ const SignUp = () => {
                     />
                   </div>
                 </Form.Group>
-                <Form.Group className="sign-up-form-group" controlId="formBasicPassword">
+                <Form.Group
+                  className="sign-up-form-group"
+                >
                   <Form.Label className="label-bold">Password</Form.Label>
                   <div className="input-container">
                     <FaLock className="input-signup-icon" />
@@ -91,8 +100,12 @@ const SignUp = () => {
                     />
                   </div>
                 </Form.Group>
-                <Form.Group className="last-sign-up-form-group" controlId="formBasicPassword">
-                  <Form.Label className="label-bold">Confirm Password</Form.Label>
+                <Form.Group
+                  className="last-sign-up-form-group"
+                >
+                  <Form.Label className="label-bold">
+                    Confirm Password
+                  </Form.Label>
                   <div className="input-container">
                     <FaLock className="input-signup-icon" />
                     <Form.Control
@@ -119,19 +132,14 @@ const SignUp = () => {
                   </Form.Text>
                 </div>
               </Form>
-
             </div>
           </div>
           <div className="second-section">
-            <div className="welcome">
-              Welcome
-            </div>
+            <div className="welcome">Welcome</div>
             <img src={register} alt="" className="sign-up-image" />
           </div>
         </div>
       </div>
-
-
     </>
   );
 };
