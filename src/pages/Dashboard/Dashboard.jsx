@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { BiLogOutCircle } from 'react-icons/bi'
 import "./dashboard.css"
 import dashboardSvg from "./../../assets/home/dashboard-logo.svg"
@@ -9,9 +9,9 @@ const Dashboard = () => {
       <div className="barside">
         <div className="options">
           <div className="dashboard-head"><img src={dashboardSvg} alt="" className='dashboard-img' /> <span className='mx-3 dashboard-title'>Dashboard</span></div>
-          <Link className='mx-2 my-2' to='/dashboard'>product</Link>
-          <Link className='mx-2 my-2' to='/dashboard/dashboard-feedback'>feedback</Link>
-          <Link className='mx-2 my-2' to='/dashboard/dashboard-support'>support</Link>
+          <NavLink className=''   to='/dashboard/main'>product</NavLink>
+          <NavLink className='' to='/dashboard/dashboard-feedback'>feedback</NavLink>
+          <NavLink className='' to='/dashboard/dashboard-support'>support</NavLink>
         </div>
         <a href="#" className='logout'>
           <BiLogOutCircle className='mx-3' />

@@ -23,6 +23,7 @@ import SignUp from "./pages/SignUp/SignUp.jsx";
 import Checkout from "./pages/CheckOut/CheckOut.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import DProducts from "./pages/dashboardPages/DashBoardProducts/DProducts.jsx";
+import DFeedback from "./pages/dashboardPages/DashBoardFeedBack/DFeedback.jsx";
 
 const user = {
   name: "Sara Ahmad",
@@ -125,6 +126,14 @@ const AppWrapper = () => {
     },
   ]);
 
+  const handleOnClick = () => {
+    const chevron = document.querySelector("#chevron");
+    // console.log(chevron);
+    const list = document.querySelector("#profile-list-group");
+    // console.log(list);
+    list.classList.toggle("show-setting-list");
+    chevron.classList.toggle("chevron-down");
+  };
   const router = createBrowserRouter([
     {
       path: "/",
@@ -136,7 +145,7 @@ const AppWrapper = () => {
         },
         {
           path: "/cart/:id",
-          element: <Cart products={products}/>,
+          element: <Cart products={products} />,
         },
         {
           path: "/find-my-pet",
@@ -148,7 +157,7 @@ const AppWrapper = () => {
         },
         {
           path: "/profile",
-          element: <Profile user={user} />,
+          element: <Profile user={user} handleOnClick={handleOnClick}/>,
         },
         {
           path: "/login",
@@ -160,7 +169,7 @@ const AppWrapper = () => {
         },
         {
           path: "/sign-up",
-          element: <SignUp/>
+          element: <SignUp />,
         },
         {
           path: "/verfiy-code",
@@ -180,35 +189,34 @@ const AppWrapper = () => {
         },
         {
           path: "/about",
-          element: <About/>
+          element: <About />,
         },
         {
           path: "/products/:id",
-          element: <ProductComponent/>
+          element: <ProductComponent />,
         },
         {
           path: "/checkout",
-          element: <Checkout/>
+          element: <Checkout />,
         },
         {
           path: "/dashboard",
-          element: <Dashboard/>,
+          element: <Dashboard />,
           children: [
             {
-
-              path: "/dashboard",
-              element: <DProducts products={products}/>
+              path: "main",
+              element: <DProducts products={products} handleOnClick={handleOnClick}/>,
             },
             {
-              path:"/dashboard-support"
-
+              path: "dashboard-support",
+              element: <DFeedback/>
             },
             {
-              path: "/dashboard-feedback"
-            }
-          ]
-
-        }
+              path: "dashboard-feedback",
+              element: <DFeedback/>
+            },
+          ],
+        },
       ],
     },
   ]);

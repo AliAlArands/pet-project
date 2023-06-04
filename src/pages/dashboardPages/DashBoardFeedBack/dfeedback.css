@@ -1,0 +1,20 @@
+.dfeedback {
+  padding-top: 25px;
+  padding-left: 47px;
+  padding-right: 100px;
+  padding-bottom: 70px;
+  height: 100%;
+  background-position-y: -50%, bottom !important;
+  background-position-x: -80%, right !important;
+}
+
+.feedback-text {
+  font-size: 2rem !important;
+  line-height: 30px !important;
+  color: rgba(109, 114, 128, 1);
+  margin-bottom: 20px;
+  padding: 5px 0;
+  padding-left: 50px;
+  background-color: white;
+  border-radius: 1rem;
+}

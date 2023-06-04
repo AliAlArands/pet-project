@@ -64,15 +64,13 @@ img {
 
 .admin-icons {
   font-size: 20px;
-  color: gray;
+  color: black;
 }
 
 .admin-icon {
   cursor: pointer;
   transition: all 0.3s all;
   margin-left: 6px;
+  background-color: #D9D9D9;
 }
 
-.admin-icon:hover {
-  color: black;
-}

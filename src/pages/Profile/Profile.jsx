@@ -4,16 +4,9 @@ import { FaChevronDown } from "react-icons/fa";
 // import { FaShoppingCart } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import profileImage from "./../../assets/profile/profile-Image.svg";
-const handleOnClick = () => {
-  const chevron = document.querySelector("#chevron");
-  // console.log(chevron);
-  const list = document.querySelector("#profile-list-group");
-  console.log(list);
-  list.classList.toggle("show-setting-list");
-  chevron.classList.toggle("chevron-down");
-};
 
-const Profile = ({ user }) => {
+
+const Profile = ({ user, handleOnClick }) => {
   return (
     <>
       <Navbar />

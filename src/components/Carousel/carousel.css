@@ -1,6 +1,6 @@
-.items {
+/* .items {
   position: relative;
-}
+} */
 
 .items-container {
   overflow: hidden;
@@ -19,11 +19,14 @@
 }
 
 .left-right-arrows {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
+  /* position: absolute; */
+  /* z-index: 3;   */
+  /* top: 50%; */
 
-  width: 100%;
+  /* width: 100%; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .chevron-product-icon {
@@ -33,7 +36,7 @@
   padding: 10px;
   margin: 10px 0;
   cursor: pointer;
-  position: absolute;
+  /* position: absolute; */
   background-color: white;
 }
 
@@ -48,10 +51,66 @@
   );
 }
 
-.chevron-left {
-  left: 20px;
+.chevron-admin {
+  box-shadow: 0px 4px 3px 2px rgb(207, 203, 203);
+  width: 44px;
+  height: 44px;
 }
 
-.chevron-right {
-  right: 20px;
+.chevron-left {
+  margin: 0 20px;
+}
+
+/* .chevron-right {
+ 
+} */
+
+.admin-product-control {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center !important;
+}
+
+
+.admin-dropdown-filter {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  z-index: 1;
+  width: 15%;
+}
+
+.admin-setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 10px !important;
+  border: 1px solid rgba(120, 116, 134, 1);
+}
+
+.admin-list-group .admin-list-group-item {
+  background-color: rgba(236, 236, 236, 1) !important;
+  margin-bottom: 2px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.btn-admin {
+  outline: 0 !important;
+  font-size: 1.8rem !important;
+  color: rgba(120, 116, 134, 1) !important;
+}
+
+.btn-admin:hover{
+  color: rgba(32, 110, 246, 1) !important;
+
+}
+
+.admin-setting-heading {
+  font-size: 1.8rem;
+  line-height: 28px;
+  margin-left: 5px;
 }
