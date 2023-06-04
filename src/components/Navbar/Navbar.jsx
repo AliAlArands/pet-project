@@ -54,10 +54,10 @@ const Navbar = () => {
         {/* <img src={cart} alt="" />
         <img src={user} alt="" /> */}
 
-        <BsCart2 onClick={handleCartClick} className="navbar-icon" />
-        {/* <Link to={`/cart/${cartId}`}>
+        {/* <BsCart2 onClick={handleCartClick} className="navbar-icon" /> */}
+        <Link to={`/cart/${cartId}`}>
           <BsCart2 />
-        </Link> */}
+        </Link>
         <Link to="/profile">
           <FiUser className="navbar-icon" />
         </Link>
