@@ -24,12 +24,13 @@ const Home = ({ products, setProducts }) => {
   const [apiProducts, setApiProducts] = useState([]);
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(8);
-
+  const [currentIndex, setCurrentIndex] = useState(0)
   const handleOnClicktoLeft = () => {
     if (start === 0) return;
     // console.log("i am here")
     setStart(start - 8);
     setEnd(start);
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? 0 : prevIndex - 1))
   };
 
   const handleOnClicktoRight = () => {
@@ -41,6 +42,8 @@ const Home = ({ products, setProducts }) => {
       setEnd(end + 8);
       setStart(start + 8);
     }
+
+    setCurrentIndex((prevIndex) => prevIndex === pages.length - 1 ? prevIndex: prevIndex + 1)
   };
 
   const styleSelectedCategory = () => {
@@ -80,10 +83,10 @@ const Home = ({ products, setProducts }) => {
       }
     };
     fetchData();
-    pagesCount = Math.ceil(apiProducts.length / 8);
-    pages = Array(pagesCount).fill(1);
-    productsLength = apiProducts.length;
   }, []);
+  pagesCount = Math.ceil(products.length / 8);
+  pages = Array(pagesCount).fill(1);
+  productsLength = products.length;
   return (
     <div className="home">
       <Navbar />
@@ -198,7 +201,7 @@ const Home = ({ products, setProducts }) => {
             className="product-pages-icon"
           />
           {pages.map((page, index) => {
-            return <span key={index}>{index + 1}</span>;
+            return <span key={index} className={ index === currentIndex ? "colored-index me-2" : "me-2"}>{index + 1}</span>;
           })}
           <BiChevronRight
             onClick={handleOnClicktoRight}

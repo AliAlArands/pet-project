@@ -2,22 +2,19 @@
 import "./NavbarStyle.css";
 import "bootstrap";
 import logo from "./../../assets/navbar/logo.svg";
-import user from "./../../assets/navbar/user.svg";
-import cart from "./../../assets/navbar/cart.svg";
-import { FiUser } from "react-icons/fi";
-import { BsCart2 } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { BsCart3, BsPerson, BsPersonFill } from "react-icons/bs";
+import { Link, NavLink } from "react-router-dom";
 // import createCart from "../../apis/cartApi";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { createCart } from "../../apis/cartApi";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
   let cartId = localStorage.getItem("cartId");
   const handleCartClick = async () => {
-
     if (!cartId) {
       try {
         cartId = await createCart(); // Call the function to create a cart
@@ -55,12 +52,14 @@ const Navbar = () => {
         <img src={user} alt="" /> */}
 
         {/* <BsCart2 onClick={handleCartClick} className="navbar-icon" /> */}
-        <Link to={`/cart/${cartId}`}>
-          <BsCart2 />
-        </Link>
-        <Link to="/profile">
-          <FiUser className="navbar-icon" />
-        </Link>
+        <NavLink to={`/cart/${cartId}`}>
+          {({ isActive }) => (isActive ? <FaShoppingCart /> : <BsCart3 />)}
+        </NavLink>
+        <NavLink to="/profile">
+          {({ isActive }) =>
+            isActive ? <BsPersonFill /> : <BsPerson className="navbar-icon" />
+          }
+        </NavLink>
       </div>
     </div>
   );

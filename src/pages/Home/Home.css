@@ -210,4 +210,9 @@
 
 .product-pages span {
   color: rgba(32, 110, 246, 1) !important;
+  border-bottom: 3px solid white;
+}
+
+.colored-index {
+  border-bottom: 3px solid rgba(32, 110, 246, 1) !important;
 }
